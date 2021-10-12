@@ -1,18 +1,26 @@
+import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Login from './Login';
 import Avatar from 'react-avatar';
-import { render } from '@testing-library/react';
-
-render(); {
-  return <span className="menu navigation-menu">Menu</span>
-}
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Profile from './components/Profile.js';
+import Leaderboard from './components/Leaderboard.js';
 
 function App() {
-  return <Login />
-
+  return (
+  <Router>
+  <Switch>
+  <Route exact path="/" component={Profile} />
+  <Route exact path="/login" component={login} />
+  <Route exact path="/register" component={register} />
+  <Route exact path="/profile" component={Profile} />
+  <Route exact path="/leaderboards" component={Leaderboard} />
+  </Switch>
+  </Router>
+  )
 }
 
 
 
 export default App;
+  
