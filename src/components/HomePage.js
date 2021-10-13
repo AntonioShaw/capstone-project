@@ -14,24 +14,24 @@ export default function HomePage() {
     return (
         <>
         <Container className="HomePage">
-            <ButtonGroup>
-                <button>Question Count</button>
-                <button>Your Ranking</button>
+            <ButtonGroup className="ProfileBar">
+                <button className="ProfileButton">Question Count</button>
+                <button className="ProfileButton">Your Ranking</button>
             </ButtonGroup>
         <br />
         <ButtonGroup className="ButtonGroup" vertical>
            <Button className="QuizButton">General Information</Button>
-           <Button>Books</Button>   
-           <Button>Movies</Button>   
-           <Button>TV</Button>   
-           <Button>Music</Button>   
-           <Button>Video Games</Button> 
-           <Button>Math</Button> 
-           <Button>Computers</Button> 
-           <Button>Geography</Button> 
-           <Button>Sports</Button> 
-           <Button>Celebrities</Button> 
-           <Button>Random</Button> 
+           <Button className="QuizButton">Books</Button>   
+           <Button className="QuizButton">Movies</Button>   
+           <Button className="QuizButton">TV</Button>   
+           <Button className="QuizButton">Music</Button>   
+           <Button className="QuizButton">Video Games</Button> 
+           <Button className="QuizButton">Math</Button> 
+           <Button className="QuizButton">Computers</Button> 
+           <Button className="QuizButton">Geography</Button> 
+           <Button className="QuizButton">Sports</Button> 
+           <Button className="QuizButton">Celebrities</Button> 
+           <Button className="QuizButton">Random</Button> 
         </ButtonGroup>     
         </Container>   
         </>
