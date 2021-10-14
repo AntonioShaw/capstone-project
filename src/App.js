@@ -7,7 +7,6 @@ import Leaderboard from './components/Leaderboard.js';
 import HomePage from './components/HomePage';
 import login from './components/Login.js';
 import register from './components/Register.js';
-import NavBar from './components/NavBar.js';
 import Quiz from './components/Quiz.js';
 
 
