@@ -6,16 +6,16 @@ import { ButtonGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-
-
+//
 // const handleClick = () => setLoading(true);
 
 
 function HomePage() {
     return (
         <div className="HomePage">
-            <div class="container">
+            <div className="container">
                 <Row>
                     <Col><button className="ProfileButton">Question Count</button></Col>    
                     <Col><button className="ProfileButton">Your Ranking</button></Col>
@@ -24,7 +24,7 @@ function HomePage() {
                 <Row className="HomeBlurb">
                     <p className="Instructions">
                     Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy text
+                industry. Lorem Ipsum has been the industrys standard dummy text
                 ever since the 1500s, when an unknown printer took a galley of
                 type and scrambled it to make a type specimen book. 
                     </p>
@@ -32,7 +32,7 @@ function HomePage() {
 
                 <Row>
                     <ButtonGroup className="ButtonGroup" vertical>
-                        <Button className="QuizButton">General Information</Button>
+                    <Link className="QuizButton" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">General Information</Button></Link>
                         <Button className="QuizButton">Books</Button>   
                         <Button className="QuizButton">Movies</Button>   
                         <Button className="QuizButton">TV</Button>   

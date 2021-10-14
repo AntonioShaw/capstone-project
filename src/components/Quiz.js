@@ -14,7 +14,8 @@ function StartQuiz(props) {
 	let score=0
 	
 	function getquestions(props) {
-		fetch(`https://quizwiz.glitch.me/quiz?category=${props.category}`)
+		console.log(props)
+		fetch(`https://quizwiz.glitch.me/quiz?category=9`)
 		.then(response => response.json())
 		.then(result => {
 			console.log(result)
