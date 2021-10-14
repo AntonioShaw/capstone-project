@@ -1,5 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from 'react';
 import Avatar from 'react-avatar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Profile from './components/Profile.js';
@@ -7,6 +8,7 @@ import Leaderboard from './components/Leaderboard.js';
 import HomePage from './components/HomePage';
 import login from './components/Login.js';
 import register from './components/Register.js';
+import NavBar from './components/NavBar';
 
 
 
