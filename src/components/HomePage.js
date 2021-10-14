@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import NavBar from './NavBar';
 
 //
 // const handleClick = () => setLoading(true);
@@ -15,12 +16,13 @@ import { Link } from 'react-router-dom';
 function HomePage() {
     return (
         <div className="HomePage">
+            <NavBar />
             <div className="container">
                 <Row>
                     <Col><button className="ProfileButton">Question Count</button></Col>    
                     <Col><button className="ProfileButton">Your Ranking</button></Col>
                 </Row>
-
+                
                 <Row className="HomeBlurb">
                     <p className="Instructions">
                     Lorem Ipsum is simply dummy text of the printing and typesetting
