@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Profile from './components/Profile.js';
 import Leaderboard from './components/Leaderboard.js';
 import HomePage from './components/HomePage';
+import login from './components/Login.js';
+import register from './components/Register.js';
+
 
 
 function App() {
