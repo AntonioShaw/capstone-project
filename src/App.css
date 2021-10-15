@@ -1,5 +1,21 @@
-/* sidebar Nav */
+html {
+  margin: 0; padding: 0;
+}
+body {
+  margin: 0; padding: 0;
+  background-color: blue;
+}
+.wrapper {
+  padding: 0; margin: 0;
+  min-height: 100%;
+  background: linear-gradient(180deg, blue, red);
+}
+.wrapper .content {
+  padding: 40px; /* Put any padding or styles here you want, it won't break gradient */
 
+}
+
+/* sidebar Nav */
 .navBar {
   position: relative;
 
@@ -32,7 +48,7 @@
 }
 
 .menuNav.showMenu {
-  background: rgba(207, 205, 223, 0.5);
+  background: rgba(86, 68, 226, 0.5);
   width: 50%;
 }
 
@@ -40,7 +56,7 @@
   display: block;
   padding: 10px 40px;
   text-decoration: none;
-  color: #3fffd2;
+  color: navy;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -52,7 +68,7 @@
 #buttonBox{
     height: 30px;
    width: 100vw;
-    background: rgba(207, 205, 223, 0.5);
+    background: whitesmoke;
     
    
 }
@@ -107,14 +123,15 @@
 };
 
 .ButtonGroup {
-  margin-top: 50px;
-  background: rgb(40, 48, 65) !important;
+  margin: auto;
+  background: rgb(40, 48, 65);
   justify-content: center;
   align-content: center;
   align-self: center;
-  width: 100%;
+  width: auto;
   border-radius: 8px;
-  display: block;
+  flex-direction: row;
+  display: flex;
 }
 
 .QuizLink {
