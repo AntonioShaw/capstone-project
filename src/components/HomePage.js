@@ -2,7 +2,7 @@ import React from 'react'
 // import { Container } from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../App.css'
-import { ButtonGroup } from 'react-bootstrap';
+import { ButtonGroup, Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
@@ -33,20 +33,22 @@ function HomePage() {
                 </Row>
 
                 <Row>
-                    <ButtonGroup className="ButtonGroup" vertical>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">General Information</Button></Link>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Books</Button></Link>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Movies</Button></Link>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">TV</Button></Link>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Music</Button></Link>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Video Games</Button></Link>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Math</Button></Link>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Computers</Button></Link>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Geography</Button></Link>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Sports</Button></Link>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Celebrities</Button></Link>
-                        <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Random</Button></Link>
-                    </ButtonGroup>     
+                    <Container>
+                        <ButtonGroup className="ButtonGroup"  vertical>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">General Information</Button></Link>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Books</Button></Link>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Movies</Button></Link>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">TV</Button></Link>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Music</Button></Link>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Video Games</Button></Link>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Math</Button></Link>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Computers</Button></Link>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Geography</Button></Link>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Sports</Button></Link>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Celebrities</Button></Link>
+                            <Link className="QuizLink" to={{pathname: `/quiz`, query:{category: '9'}}}><Button className="QuizButton">Random</Button></Link>
+                        </ButtonGroup>
+                    </Container>     
                 </Row>
             </div>   
         </div>
