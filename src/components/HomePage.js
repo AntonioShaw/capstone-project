@@ -17,7 +17,7 @@ function HomePage() {
     const styling = {
         backgroundColor: 'rgba(255, 255, 255, .15)',
         backdropFilter: 'blur(5px)',
-        color: 'black',
+        color: 'silver',
         flexDirection: 'column',
         display: 'block',
         marginLeft: 'auto',
@@ -30,12 +30,12 @@ function HomePage() {
         minWidth: '325px'
     }
     return (
-        <div className="HomePage">
+        <div>
             <NavBar />
-            <div className="container">
+            <div>
                 <Row>
-                    <Col><button className="ProfileButton">Question Count</button></Col>
-                    <Col><button className="ProfileButton">Your Ranking</button></Col>
+                    <Col><Button className="ProfileButton">Question Count</Button></Col>
+                    <Col><Button className="ProfileButton">Your Ranking</Button></Col>
                 </Row>
 
                 <Row className="HomeBlurb" style={styling}>
@@ -49,21 +49,21 @@ function HomePage() {
                         the leaderboard and prove to everyone that you are the one, true QuizWiz!
                     </p>
                 </Row>
-                <div style={styling}>
-                <Row>
+                <div>
+                <Row className="ButtonContainer" style={styling}>
                     <ButtonGroup className="ButtonGroup" vertical block style={{display: 'flex', alignItems: 'center', justifyContent: 'center',maxWidth: '100%'}}> 
                         <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">General Information</Button></Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">Books</Button></Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">Movies</Button></Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">TV</Button></Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">Music</Button></Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">Video Games</Button></Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">Math</Button></Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">Computers</Button></Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">Geography</Button></Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">Sports</Button></Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">Celebrities</Button></Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">Random</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '10' } }}><Button className="QuizButton">Books</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '11' } }}><Button className="QuizButton">Movies</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '14' } }}><Button className="QuizButton">TV</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '12' } }}><Button className="QuizButton">Music</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '15' } }}><Button className="QuizButton">Video Games</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '19' } }}><Button className="QuizButton">Math</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '18' } }}><Button className="QuizButton">Computers</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '22' } }}><Button className="QuizButton">Geography</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '21' } }}><Button className="QuizButton">Sports</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '26' } }}><Button className="QuizButton">Celebrities</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '100' } }}><Button className="QuizButton">Random</Button></Link>
                     </ButtonGroup>
                 </Row>
                 </div>

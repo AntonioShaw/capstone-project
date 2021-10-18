@@ -18,8 +18,8 @@ function App() {
       backgroundRepeat: "noRepeat",
       backgroundAttachment: 'fixed',
       backgroundPosition: 'center',
-      backgroundSize: '90% 100%',
-      height: '100%',
+      backgroundSize: '100%',
+      height: '200vh',
       }}
     >
       <Switch>

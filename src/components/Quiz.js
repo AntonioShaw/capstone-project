@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import '../App.css';
+import NavBar from './NavBar';
 
 
 
@@ -64,8 +65,11 @@ function StartQuiz(props) {
 	
 	return (
 		<div>
+			<NavBar />
+		<div>
 		{currentquestion}
 		{questions == null ? <Button onClick={() => playquiz()}>Press to start</Button> : <Button onClick={() => playquiz()}>Next question</Button>	}
+		</div>
 		</div>
 	)
 }
