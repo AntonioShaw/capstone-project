@@ -1,3 +1,107 @@
+#logBody{
+background-color: whitesmoke;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  background: -webkit-linear-gradient( #000 15%, #3a3737 51%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+.log-Btn{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #000 0%, #808080 51%, #fff 100%);
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.logBtn:hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+}
+
+#login-Container{
+  display: flex;
+  flex-direction: column;
+}
+
+.log-RegText{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  border: 2px solid ;
+  padding: 10px;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.regLink{
+  text-decoration: none;
+}
+
+.icon-container {
+  height: 100vh;
+  margin-top: 11px;
+}
+
+.icon-container img{
+  height: 50px;
+  width: 50px;  
+}
+
+#google-btn{
+  display: flex;
+  color: white;
+  background-color: #cb4024;
+  width:75%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  border-radius: 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transition: all ease-in-out .6s;
+}
+#instagram-btn{
+  display: flex;
+  color: white;
+  border-radius: 10px;
+  width:75%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  border-radius: 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  background-size: 200%auto;  
+  background-image: linear-gradient(to right,#6559ca 5%, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  
+  
 /* sidebar Nav */
 .navBar {
   position: relative;
@@ -77,6 +181,72 @@
   width: auto;
   backdrop-filter: blur(5px);
   border-radius: 15px;
+}
+  
+#facebook-btn{
+  display: flex;
+  color: white;
+  background-color: #4168bb;
+  width:75%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  border-radius: 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+#github-btn{
+  display: flex;
+  color: white;
+  background-color: black;
+  width:75%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  border-radius: 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+  
+#icon {
+  background: white;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 5%;
+  height: 44px;
+}
+
+#icon:hover {
+  transform: translateY(-10px);
+}
+
+#google{
+  display: flex;
+    align-items: center;
+    padding-left: 30px;
+    
+}
+
+#instagram{
+  display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+#facebook{
+  display: flex;
+    align-items: center;
+    padding-left: 30px;
+    
+}
+
+#github{
+  display: flex;
+    align-items: center;
+    padding-left: 30px;
 }
 
 .ButtonContainer {
