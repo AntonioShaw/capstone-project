@@ -1,17 +1,22 @@
+
 #logBody{
-background-color: whitesmoke;
+
+  height: 100vh
 }
 
-h1 {
-  font-size: 50px;
-  font-weight: bold;
-  background: -webkit-linear-gradient( #000 15%, #3a3737 51%, #fff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top:10px;
-  margin-bottom: 10px;
+#login-title{
+display: flex;
+justify-content: center;
+padding-top: 5%;
+font-size: 50px;
+font-weight: bold;
+background: -webkit-linear-gradient( #000 15%, #3a3737 51%, #fff 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-left: auto;
+margin-right: auto;
+
+margin-bottom: 10%;
 }
 
 .log-Btn{
@@ -46,6 +51,8 @@ h1 {
 #login-Container{
   display: flex;
   flex-direction: column;
+ 
+
 }
 
 .log-RegText{
@@ -63,7 +70,7 @@ h1 {
 }
 
 .icon-container {
-  height: 100vh;
+ 
   margin-top: 11px;
 }
 
@@ -71,6 +78,16 @@ h1 {
   height: 50px;
   width: 50px;  
 }
+
+#icon {
+  background: white;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 5%;
+  height: 44px;
+}
+
+
 
 #google-btn{
   display: flex;
@@ -85,7 +102,13 @@ h1 {
   border-radius: 2px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
   transition: all ease-in-out .6s;
+  text-decoration: none;
 }
+
+#google-btn:hover {
+  transform: translateY(-10px);
+}
+
 #instagram-btn{
   display: flex;
   color: white;
@@ -100,6 +123,57 @@ h1 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
   background-size: 200%auto;  
   background-image: linear-gradient(to right,#6559ca 5%, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+  
+  transition: all ease-in-out .6s;
+  text-decoration: none;
+}
+
+
+#instagram-btn:hover {
+  transform: translateY(-10px);
+}
+
+#facebook-btn{
+  display: flex;
+  color: white;
+  background-color: #4168bb;
+  width:75%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  border-radius: 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transition: all ease-in-out .6s;
+  text-decoration: none;
+}
+
+
+#facebook-btn:hover {
+  transform: translateY(-10px);
+}
+
+#github-btn{
+  display: flex;
+  color: white;
+  background-color: black;
+  width:75%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  border-radius: 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transition: all ease-in-out .6s;
+  text-decoration: none;
+}
+
+
+#github-btn:hover {
+  transform: translateY(-10px);
 }
   
 /* sidebar Nav */
@@ -183,45 +257,6 @@ h1 {
   border-radius: 15px;
 }
   
-#facebook-btn{
-  display: flex;
-  color: white;
-  background-color: #4168bb;
-  width:75%;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  border-radius: 10px;
-  border-radius: 2px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
-
-#github-btn{
-  display: flex;
-  color: white;
-  background-color: black;
-  width:75%;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  border-radius: 10px;
-  border-radius: 2px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
-  
-#icon {
-  background: white;
-  border-radius: 2px;
-  display: inline-block;
-  margin: 5%;
-  height: 44px;
-}
-
-#icon:hover {
-  transform: translateY(-10px);
-}
 
 #google{
   display: flex;
@@ -295,3 +330,137 @@ h1 {
   height: 100%;
   justify-self: center;
 }
+
+/*********** from 0px - 320px ***********/
+
+@media only screen  and (max-device-width : 284px){
+  #login-title{
+    padding-top: 12%;
+    margin-bottom: 5%;
+    font-size: 40px;
+    }
+  }
+
+@media only screen  and (min-device-width : 285px) and (max-device-width : 320px){
+#login-title{
+  padding-top: 0%;
+  margin-bottom: 0%;
+  font-size: 40px;
+  }
+}
+
+@media only screen and (min-device-width : 321px) and (max-device-width : 359px){
+  #login-title{
+    padding-top: 2%;
+    margin-bottom: 5%;
+  }
+  }
+
+@media only screen and (min-device-width : 360px) and (max-device-width : 413px) {
+  #login-title{
+    margin-bottom: 6%;
+    }
+}
+
+@media only screen and (min-device-width : 414px) and (max-device-width : 480px) {
+  #login-title{
+    margin-bottom: 6%;
+    padding-top: 10%;
+    }
+}
+
+@media only screen and (min-device-width : 481px) and (max-device-width : 768px) {
+  #login-title{
+    margin-bottom: 5%;
+    font-size: 90px;
+    padding-top: 15%;
+
+    }
+}
+
+@media only screen and (min-device-width : 769px) and (max-device-width : 1023px) {
+
+  #login-title{
+    margin-bottom: 5%;
+    font-size: 90px;
+    padding-top: 15%;
+
+    }
+}
+
+/* //THIS IS EVERYTHING ABOVE 1024// */
+@media (min-device-width:1024px) and (max-device-width : 1279px){
+  #login-title{
+    font-size: 110px;
+    margin-bottom: 10%;
+    padding-top: 20%;
+    }
+
+  #google-btn{
+       width:60%;
+    }
+
+  #instagram-btn{
+      width:60%;
+   }
+
+  #facebook-btn{
+    width:60%;
+ }
+
+  #github-btn{
+  width:60%;
+ }
+
+ .log-RegText{
+  width: 60%;
+}
+    
+    
+}
+
+@media only screen and (min-device-width:1280px){
+  #login-title{
+    font-size: 110px;
+    margin-bottom: 10%;
+    padding-top: 0%;
+    }
+
+  #google-btn{
+       width:60%;
+    }
+
+  #instagram-btn{
+      width:60%;
+   }
+
+  #facebook-btn{
+    width:60%;
+ }
+
+  #github-btn{
+  width:60%;
+ }
+
+ .log-RegText{
+  width: 60%;
+}
+    
+    
+}
+
+@media only screen and (min-device-height : 720px) and (max-device-height : 811px){
+  #login-title{
+    padding-top: 10%;
+    margin-bottom: 6%;
+    font-size: 60px;
+    }
+  }
+
+@media only screen and (min-device-height : 812px) and (max-device-height : 1023px){
+  #login-title{
+    padding-top: 18%;
+    margin-bottom: 10%;
+    font-size: 60px;
+    }
+  }
