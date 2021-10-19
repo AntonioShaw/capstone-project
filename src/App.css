@@ -100,7 +100,7 @@ h1 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
   background-size: 200%auto;  
   background-image: linear-gradient(to right,#6559ca 5%, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-  
+}
   
 /* sidebar Nav */
 .navBar {
