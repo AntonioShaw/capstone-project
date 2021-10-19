@@ -3,6 +3,13 @@
   height: 100vh
 }
 
+#hey{
+  height: 100vh;
+}
+  
+
+
+
 #login-title{
 display: flex;
 justify-content: center;
@@ -329,7 +336,7 @@ margin-bottom: 10%;
   justify-self: center;
 }
 
-/*********** from 0px - 320px ***********/
+/*********** from 0px - 284px ***********/
 
 @media only screen  and (max-device-width : 284px){
   #login-title{
@@ -337,6 +344,7 @@ margin-bottom: 10%;
     margin-bottom: 5%;
     font-size: 40px;
     }
+    
   }
 
 @media only screen  and (min-device-width : 285px) and (max-device-width : 320px){
@@ -345,8 +353,8 @@ margin-bottom: 10%;
   margin-bottom: 0%;
   font-size: 40px;
   }
-}
 
+}
 @media only screen and (min-device-width : 321px) and (max-device-width : 359px){
   #login-title{
     padding-top: 2%;
@@ -386,7 +394,7 @@ margin-bottom: 10%;
     }
 }
 
-/* //THIS IS EVERYTHING ABOVE 1024// */
+
 @media (min-device-width:1024px) and (max-device-width : 1279px){
   #login-title{
     font-size: 110px;
@@ -420,8 +428,8 @@ margin-bottom: 10%;
 @media only screen and (min-device-width:1280px){
   #login-title{
     font-size: 110px;
-    margin-bottom: 10%;
-    padding-top: 0%;
+    margin-bottom: 3%;
+    padding-top: 2%;
     }
 
   #google-btn{
@@ -455,7 +463,7 @@ margin-bottom: 10%;
     }
   }
 
-@media only screen and (min-device-height : 812px) and (max-device-height : 1023px){
+@media only screen and (min-device-height : 812px) and (max-device-height : 823px){
   #login-title{
     padding-top: 18%;
     margin-bottom: 10%;
