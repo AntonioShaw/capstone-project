@@ -19,7 +19,7 @@ function App() {
       backgroundAttachment: 'fixed',
       backgroundPosition: 'center',
       backgroundSize: '100%',
-    
+
       }}
     >
       <Switch>

@@ -52,7 +52,16 @@ function HomePage() {
                 <div>
                 <Row className="ButtonContainer" style={styling}>
                     <ButtonGroup className="ButtonGroup" vertical block style={{display: 'flex', alignItems: 'center', justifyContent: 'center',maxWidth: '100%'}}> 
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}><Button className="QuizButton">General Information</Button></Link>
+                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}>
+                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
+                                <div>Image goes here</div>
+                                <div className="QuizButtonText">General Information</div></div>
+                            </Button>
+                        </Link>
+
+
+
+
                         <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '10' } }}><Button className="QuizButton">Books</Button></Link>
                         <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '11' } }}><Button className="QuizButton">Movies</Button></Link>
                         <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '14' } }}><Button className="QuizButton">TV</Button></Link>
