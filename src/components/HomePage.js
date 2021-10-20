@@ -54,73 +54,73 @@ function HomePage() {
                 <div>
                 <Row className="ButtonContainer" style={styling}>
                     <ButtonGroup className="ButtonGroup" vertical block style={{display: 'flex', alignItems: 'center', justifyContent: 'center',maxWidth: '100%'}}> 
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '9' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/9`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faBrain}/>
                                 <div className="QuizButtonText">General Information</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '10' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/10`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faBook}/>
                                 <div className="QuizButtonText">Books</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '11' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/11`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faFilm}/>
                                 <div className="QuizButtonText">Movies</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '12' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/12`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faMusic}/>
                                 <div className="QuizButtonText">Music</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '14' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/14`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faTv}/>
                                 <div className="QuizButtonText">TV</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '15' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/15`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faGamepad}/>
                                 <div className="QuizButtonText">Video Games</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '18' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/18`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faMouse}/>
                                 <div className="QuizButtonText">Computers</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '19' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/19`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faCalculator}/>
                                 <div className="QuizButtonText">Math</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '21' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/21`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faFootballBall}/>
                                 <div className="QuizButtonText">Sports</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '22' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/22`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faGlobeAmericas}/>
                                 <div className="QuizButtonText">Geography</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '26' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/26`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faGem}/>
                                 <div className="QuizButtonText">Celebrities</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz`, query: { category: '100' } }}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/100`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
                                 <FontAwesomeIcon icon={faQuestion}/>
                                 <div className="QuizButtonText">Random</div></div>

@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import '../App.css';
 import NavBar from './NavBar';
 
 
 
-function StartQuiz(props) {
+
+function StartQuiz() {
+	const params = useParams();
+
 	const [currentquestion, setcurrentquestion] = useState("")
 	let [questioncounter, setquestioncounter] = useState(0)
 	const [questions, setquestions] = useState()
@@ -14,10 +17,11 @@ function StartQuiz(props) {
 	const [answers, setanswers] = useState([])
 	let [quizfinished, setquizfinished] = useState(false)
 	let currentanswers = []
-	let [score, setcorrectquestions] = useState([])
+	let [currentscore, setcurrentscore] = useState(0)
 	
-	function getquestions(props) {
-		fetch(`https://quizwiz.glitch.me/quiz?category=9`)
+	function getquestions() {
+		
+		fetch(`https://quiz-wiz-server.glitch.me/quiz/${params['category']}`)
 		.then(response => response.json())
 		.then(result => {
 			setquestions([...result])
@@ -29,48 +33,45 @@ function StartQuiz(props) {
 	function gamesOver() {
 		if(questioncounter == 10){
 			console.log("Your score is: ")
-			console.log(score.length)
+			console.log(currentscore)
 			//setquizfinished(true)
 		}
 	}
 
 	
 	function playquiz() {
-		if(questioncounter == 10){
+		if(questioncounter === 10){
 			gamesOver()
+		}else{
+			currentanswers = []
+			setcurrentquestion((questions[questioncounter].question).replace(/(&quot;)/g,"\"").replace(/(&shy;)/g,"-").replace(/(&#039;)/g,"'").replace(/(&oacute;)/g,"ó").replace(/(&rsquo;)/g,"’").replace(/(&ldquo;)/g,"“").replace(/(&hellip;)/g,"...").replace(/(&rdquo;)/g, "\""))
+			setcorrectanswer((questions[questioncounter].correct_answer).replace(/(&quot;)/g,"\"").replace(/(&shy;)/g,"-").replace(/(&#039;)/g,"'").replace(/(&oacute;)/g,"ó").replace(/(&rsquo;)/g,"’").replace(/(&ldquo;)/g,"“").replace(/(&hellip;)/g,"...").replace(/(&rdquo;)/g, "\""))
+			
+			for(let i=0; i<3; i++){
+				currentanswers.push((questions[questioncounter].incorrect_answers[i]).replace(/(&quot;)/g,"\"").replace(/(&shy;)/g,"-").replace(/(&#039;)/g,"'").replace(/(&oacute;)/g,"ó").replace(/(&rsquo;)/g,"’").replace(/(&ldquo;)/g,"“").replace(/(&rdquo;)/g, "\"").replace(/(&hellip;)/g, "..."))
+			}
+			currentanswers.push((questions[questioncounter].correct_answer).replace(/(&quot;)/g,"\"").replace(/(&shy;)/g,"-").replace(/(&#039;)/g,"'").replace(/(&oacute;)/g,"ó").replace(/(&rsquo;)/g,"’").replace(/(&ldquo;)/g,"“").replace(/(&rdquo;)/g, "\"").replace(/(&hellip;)/g, "..."))
+			setanswers(currentanswers.sort(() => Math.random() - 0.5))
 		}
-		currentanswers = []
-		setcurrentquestion((questions[questioncounter].question).replace(/(&quot;)/g,"\"").replace(/(&shy;)/g,"-").replace(/(&#039;)/g,"'").replace(/(&oacute;)/g,"ó").replace(/(&rsquo;)/g,"’").replace(/(&ldquo;)/g,"“").replace(/(&hellip;)/g,"...").replace(/(&rdquo;)/g, "\""))
-		setcorrectanswer((questions[questioncounter].correct_answer).replace(/(&quot;)/g,"\"").replace(/(&shy;)/g,"-").replace(/(&#039;)/g,"'").replace(/(&oacute;)/g,"ó").replace(/(&rsquo;)/g,"’").replace(/(&ldquo;)/g,"“").replace(/(&hellip;)/g,"...").replace(/(&rdquo;)/g, "\""))
-		
-		for(let i=0; i<3; i++){
-			currentanswers.push((questions[questioncounter].incorrect_answers[i]).replace(/(&quot;)/g,"\"").replace(/(&shy;)/g,"-").replace(/(&#039;)/g,"'").replace(/(&oacute;)/g,"ó").replace(/(&rsquo;)/g,"’").replace(/(&ldquo;)/g,"“").replace(/(&rdquo;)/g, "\"").replace(/(&hellip;)/g, "..."))
-		}
-		currentanswers.push((questions[questioncounter].correct_answer).replace(/(&quot;)/g,"\"").replace(/(&shy;)/g,"-").replace(/(&#039;)/g,"'").replace(/(&oacute;)/g,"ó").replace(/(&rsquo;)/g,"’").replace(/(&ldquo;)/g,"“").replace(/(&rdquo;)/g, "\"").replace(/(&hellip;)/g, "..."))
-		setanswers(currentanswers.sort(() => Math.random() - 0.5))
-
-		
-
-		setquestioncounter(questioncounter+=1)	
 	}
 	
 	function checkAnswer(i) {
 		if (answers[i] == correctanswer){
 			console.log("right answer!")
-			setcorrectquestions(score => [...score, "correct"])
-			console.log(score.length)
-			playquiz()
+			setcurrentscore(currentscore => currentscore+1)
 		}else{
 			console.log("you dummy")
-			console.log(score.length)
-			playquiz()
+			console.log(currentscore)
 		}
+		console.log(currentscore)
+		setquestioncounter(questioncounter+=1)
+		playquiz()
+
 	}
 
 	
 	useEffect(() => {
-		console.log(score)
-			getquestions()
+		getquestions()
 			
 		return (
 			<div>
