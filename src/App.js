@@ -20,6 +20,7 @@ function App() {
       backgroundPosition: 'center',
       backgroundSize: '100%',
       height: '100%',
+      width: '100%',
       }}
     >
       <Switch>

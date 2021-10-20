@@ -38,12 +38,8 @@ function HomePage() {
     }
     return (
         <div>
-            <NavBar />
+            <NavBar id='navBar' />
             <div>
-                <Row>
-                    <Button className="btn-info btn-edit btn btn-default">Your Ranking</Button>
-                </Row>
-
                 <Row className="HomeBlurb" style={styling}>
                     <p className="Instructions">
                         Welcome to QuizWiz, a fun trivia game where your knowledge of various topics 
