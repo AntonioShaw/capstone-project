@@ -2,7 +2,7 @@ import React from 'react'
 // import { Container } from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../App.css'
-import { ButtonGroup, Container } from 'react-bootstrap';
+import { ButtonGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
