@@ -54,7 +54,7 @@ function Login(props) {
 
     return (
         <div id="logBody">
-            <div id="login-title"></div>
+            <div id="login-title">Quiz Whiz</div>
             <div id="login-Container">
                 
                 <input className="log-RegText" type="text" name="username" onChange={handleLoginChange} placeholder="User name" /><br></br>
