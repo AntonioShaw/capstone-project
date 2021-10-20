@@ -22,7 +22,8 @@ function Login(props) {
     }
 
     const handleLoginButton = () => {
-        fetch('https://quiz-wiz-server.glitch.me/api/login', {
+        // fetch('https://quizwiz.glitch.me/api/login', {
+        fetch('http://localhost:8080/api/login', {
             method: 'POST',
             origin: '*',
             headers: {
@@ -66,30 +67,30 @@ function Login(props) {
 
             Not A Member Yet?  <NavLink to="/register" className='regLink'>Register Here</NavLink>
 
-                <a id="google-btn" href="https://quiz-wiz-server.glitch.me/auth/google">
-                <a href="https://quiz-wiz-server.glitch.me/auth/google">
+                <a id="google-btn" href="http://localhost:8080/auth/google">
+                <a href="http://localhost:8080/auth/google">
                     <img id="icon" src={googleLogo} alt="Login With Google"  style={{ backgroundColor: "#CB4024" }}></img>
                 </a>
                 <div id="google">Login With Google</div>
                 </a>
                 
 
-                <a id="instagram-btn" href="https://quiz-wiz-server.glitch.me/auth/instagram">
-                <a href="https://quiz-wiz-server.glitch.me/auth/instagram">
+                <a id="instagram-btn" href="http://localhost:8080/auth/instagram">
+                <a href="http://localhost:8080/auth/instagram">
                     <img id="icon" src={instagramLogo} alt="Login With Instagram"  style={{ backgroundColor: "#d9317a" }}></img>
                 </a>
                 <div id="instagram">Login With Instagram</div>
                 </a>
 
-                <a id="facebook-btn" href="https://quiz-wiz-server.glitch.me/auth/facebook">
-                <a href="https://quiz-wiz-server.glitch.me/auth/facebook">
+                <a id="facebook-btn" href="http://localhost:8080/auth/facebook">
+                <a href="http://localhost:8080/auth/facebook">
                     <img id="icon" src={facebookLogo} alt="Login With Facebook"  style={{ backgroundColor: "#3B5899" }}></img>
                 </a>
                 <div id="facebook">Login With Facebook</div>
                 </a>
 
-                <a id="github-btn" href="https://quiz-wiz-server.glitch.me/auth/github">
-                <a href="https://quiz-wiz-server.glitch.me/auth/github">
+                <a id="github-btn" href="http://localhost:8080/auth/github">
+                <a href="http://localhost:8080/auth/github">
                     <img id="icon" src={githubLogo} alt="Login With Github"  style={{ backgroundColor: "#333333" }}></img>
                 </a>
                 <div id="github">Login With Github</div>
