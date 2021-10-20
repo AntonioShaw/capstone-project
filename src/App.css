@@ -416,7 +416,7 @@ color:whitesmoke
 @media only screen and (min-device-width : 481px) and (max-device-width : 768px) {
   #login-title{
     margin-bottom: 5%;
-    font-size: 90px;
+   
     padding-top: 15%;
 
     }
@@ -426,7 +426,7 @@ color:whitesmoke
 
   #login-title{
     margin-bottom: 5%;
-    font-size: 90px;
+  
     padding-top: 15%;
 
     }
@@ -435,7 +435,7 @@ color:whitesmoke
 
 @media (min-device-width:1024px) and (max-device-width : 1279px){
   #login-title{
-    font-size: 110px;
+    font-size: 80px;
     margin-bottom: 10%;
     padding-top: 20%;
     }
@@ -470,7 +470,7 @@ color:whitesmoke
 
 @media only screen and (min-device-width:1280px) and (max-device-width:1439px){
   #login-title{
-    font-size: 110px;
+    font-size: 80px;
     margin-bottom: 3%;
     padding-top: 2%;
     }
@@ -496,7 +496,7 @@ color:whitesmoke
 }
 
 }
-@media only screen and (min-device-width:1440px){
+@media only screen and (min-device-width:2240px){
   .navBar{
     
     margin-bottom: 2%;
@@ -504,7 +504,7 @@ color:whitesmoke
   }
 
  #login-title{
-   font-size:130px;
+   font-size:100px;
    padding-top: 0%;
    margin-bottom: 5%;
   
