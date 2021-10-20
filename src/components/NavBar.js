@@ -21,16 +21,17 @@ function Navbar() {
 
     return (
         <nav className="navBar">
-          <div id= 'NavBarBackground'>  
-            <button onClick={handleToggle}>{navbarOpen ? (
-                <MdClose style={{ color: "#3fffd2", width: "70px", height: "30px" }} />) : (
-                <FiMenu style={{ color: "#3fffd2", width: "70px", height: "30px" }} />
-            )}</button>
-            
-            <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-            <NavLink to="/home" className='inactive'id="a">Home</NavLink>
-            <NavLink to="/profile" className='inactive'id='a' >Profile</NavLink>
-            </ul>
+            <div id='NavBarBackground'>
+                <button onClick={handleToggle}>{navbarOpen ? (
+                    <MdClose style={{ color: "#3fffd2", width: "70px", height: "30px" }} />) : (
+                    <FiMenu style={{ color: "#3fffd2", width: "70px", height: "30px" }} />
+                )}</button>
+
+                <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
+                    <NavLink to="/home" className='inactive' id="a">Home</NavLink>
+                    <NavLink to="/profile" className='inactive' id='a' >Profile</NavLink>
+                </ul>
+            </div>
         </nav>
     )
 }
