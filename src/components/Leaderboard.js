@@ -29,8 +29,7 @@ function Leaderboard() {
         minWidth: '325px'
     }
     return (
-        <>
-            <NavBar />
+       
                 <Row className="HomeBlurb" style={styling}>
                     <Carousel fade>
                         <Carousel.Item>
@@ -70,7 +69,7 @@ function Leaderboard() {
                         </Carousel.Item>
                     </Carousel>
                 </Row>
-        </>
+        
     )
     }
 

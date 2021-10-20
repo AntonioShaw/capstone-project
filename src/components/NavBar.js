@@ -26,7 +26,7 @@ function Navbar() {
                 <MdClose style={{ color: "#3fffd2", width: "70px", height: "30px" }} />) : (
                 <FiMenu style={{ color: "#3fffd2", width: "70px", height: "30px" }} />
             )}</button>
-            </div>
+            
             <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
             <NavLink to="/home" className='inactive'id="a">Home</NavLink>
             <NavLink to="/profile" className='inactive'id='a' >Profile</NavLink>

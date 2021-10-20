@@ -3,13 +3,6 @@
   height: 100vh
 }
 
-#hey{
-  height: 100vh;
-}
-  
-
-
-
 #login-title{
 display: flex;
 justify-content: center;
@@ -180,6 +173,7 @@ margin-bottom: 10%;
   transform: translateY(-10px);
 }
 
+
 /* Navigation Bar settings follow. */
 
 .navBar{
@@ -199,7 +193,7 @@ margin-bottom: 10%;
 }
 
 .navBar button {
-  position: fixed;
+  /* position: fixed; */
   
   top: 0;
   z-index: 10;
@@ -252,10 +246,9 @@ margin-bottom: 10%;
   }
 }
 
-.btn-info {
+.ProfileButton {
   margin: 10px;
-  width: 15% !important;
-  height: 20% !important;
+  background-color: orange;
   border-radius: 15px;
 }
 
@@ -320,6 +313,65 @@ margin-bottom: 10%;
   width: 100%;
   height: 100%;
   justify-self: center;
+}
+
+/*************PROFILE PAGE****************/
+
+#top-container{
+
+  display: flex;
+ 
+}
+
+#top-container{
+  /* display:flex; */
+  justify-content: left;
+  padding: 10px;
+  height: fit-content;
+}
+
+#hamburger{
+  
+  margin-left: 5px;
+  
+}
+
+#bottom-container{
+  height: 84vh;
+}
+
+#avatar-container{
+ 
+}
+
+#profile-container{
+  padding:10px;
+  margin-top:55px
+}
+
+#info-container{
+color:whitesmoke
+}
+
+#leaderboard-container{
+  margin-top: 100px;
+}
+
+
+/*************REGISTRATION PAGE****************/
+
+#register-container{
+  display: flex;
+  flex-direction: column;
+ text-align: center;
+ height: 100vh;
+ padding-top: 15%;
+}
+
+.logLink{
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: x-large;
 }
 
 /*********** from 0px - 284px ***********/

@@ -6,7 +6,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 function HomeButton() {
 	return(
-		<Link to={'/'}><FontAwesomeIcon icon={faHome} /></Link>
+		<Link to={'/'}><FontAwesomeIcon icon={faHome} size = '2x'/></Link>
 	)
 }
 
