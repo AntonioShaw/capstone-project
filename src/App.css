@@ -3,13 +3,6 @@
   height: 100vh
 }
 
-#hey{
-  height: 100vh;
-}
-  
-
-
-
 #login-title{
 display: flex;
 justify-content: center;
@@ -179,15 +172,28 @@ margin-bottom: 10%;
 #github-btn:hover {
   transform: translateY(-10px);
 }
-  
+
+
+/* Navigation Bar settings follow. */
+
+.navBar{
+  height: 50px;
+  width: 100%;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  margin-bottom: 5%;
+  background: #3276ad;
+
+}
+
 /* sidebar Nav */
-.navBar {
+.navBarSidebar {
   position: relative;
 
 }
 
 .navBar button {
-  position: fixed;
+  /* position: fixed; */
   
   top: 0;
   z-index: 10;
@@ -213,8 +219,10 @@ margin-bottom: 10%;
 }
 
 .menuNav.showMenu {
-  background: rgba(86, 68, 226, 0.5);
-  width: 50%;
+  background: rgba(64, 87, 163, 0.555);
+  width: auto;
+  height: min-content;
+  border-radius: 8px;
 }
 
 #a{
@@ -229,26 +237,18 @@ margin-bottom: 10%;
 .menuNav li:first-child {
   margin-top: 7rem;
 }
+/* Navigation bar settings end. */
 
-#buttonBox{
-    height: 30px;
-   width: 100vw;
-    background: whitesmoke;
-    
-   
-}
-
+/* Media queries. */
 @media (max-device-width:1024px) {
   #buttonBox{
-      height: 100px;
+      height: 50px;
   }
-  
 }
 
-.btn-info {
+.ProfileButton {
   margin: 10px;
-  width: 15% !important;
-  height: 20% !important;
+  background-color: orange;
   border-radius: 15px;
 }
 
@@ -267,7 +267,6 @@ margin-bottom: 10%;
   display: flex;
     align-items: center;
     padding-left: 30px;
-    
 }
 
 #instagram{
@@ -280,7 +279,6 @@ margin-bottom: 10%;
   display: flex;
     align-items: center;
     padding-left: 30px;
-    
 }
 
 #github{
@@ -299,29 +297,11 @@ margin-bottom: 10%;
   align-content: center;
   align-self: center;
   width: auto;
-  /* border-radius: 8px; */
   flex-direction: row;
   display: flex;
 }
 
-.card {
-  background: navy;
-  display: inline-block;
-  margin: 10px;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 2px #333;
-  width: 200px;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.HomePageTitle {
-  background-color: aquamarine;
-  background: violet;
-}
-
 .QuizLink {
-  background-color: rgb(21, 15, 63);
   margin-top: 15px;
   margin-bottom: 15px;
   width: 80%;
@@ -330,10 +310,68 @@ margin-bottom: 10%;
 }
 
 .QuizButton {
-  background-color: rgb(21, 15, 63);
   width: 100%;
   height: 100%;
   justify-self: center;
+}
+
+/*************PROFILE PAGE****************/
+
+#top-container{
+
+  display: flex;
+ 
+}
+
+#top-container{
+  /* display:flex; */
+  justify-content: left;
+  padding: 10px;
+  height: fit-content;
+}
+
+#hamburger{
+  
+  margin-left: 5px;
+  
+}
+
+#bottom-container{
+  height: 84vh;
+}
+
+#avatar-container{
+ 
+}
+
+#profile-container{
+  padding:10px;
+  margin-top:55px
+}
+
+#info-container{
+color:whitesmoke
+}
+
+#leaderboard-container{
+  margin-top: 100px;
+}
+
+
+/*************REGISTRATION PAGE****************/
+
+#register-container{
+  display: flex;
+  flex-direction: column;
+ text-align: center;
+ height: 100vh;
+ padding-top: 15%;
+}
+
+.logLink{
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: x-large;
 }
 
 /*********** from 0px - 284px ***********/
@@ -359,8 +397,8 @@ margin-bottom: 10%;
   #login-title{
     padding-top: 2%;
     margin-bottom: 5%;
-  }
-  }
+    }
+}
 
 @media only screen and (min-device-width : 360px) and (max-device-width : 413px) {
   #login-title{
