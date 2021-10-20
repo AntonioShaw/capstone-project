@@ -13,7 +13,7 @@ function StartQuiz() {
 
 	const [currentquestion, setcurrentquestion] = useState("")
 	let [questioncounter, setquestioncounter] = useState(0)
-	const [questions, setquestions] = useState()
+	const [questions, setquestions] = useState([])
 	const [correctanswer, setcorrectanswer] = useState(null)
 	const [answers, setanswers] = useState([])
 	let [quizfinished, setquizfinished] = useState(false)
@@ -32,17 +32,15 @@ function StartQuiz() {
 	}
 	
 	function gamesOver() {
-		if(questioncounter == 10){
-			console.log("Your score is: ")
-			console.log(currentscore)
-			//setquizfinished(true)
-		}
+		console.log("Your score is: ")
+		console.log(currentscore)
+		//setquizfinished(true)
 	}
 
 	
 	function playquiz() {
 		if(questioncounter === 10){
-			gamesOver()
+			setquizfinished(true)
 		}else{
 			currentanswers = []
 			setcurrentquestion((questions[questioncounter].question).replace(/(&quot;)/g,"\"").replace(/(&shy;)/g,"-").replace(/(&#039;)/g,"'").replace(/(&oacute;)/g,"ó").replace(/(&rsquo;)/g,"’").replace(/(&ldquo;)/g,"“").replace(/(&hellip;)/g,"...").replace(/(&rdquo;)/g, "\""))
@@ -59,7 +57,7 @@ function StartQuiz() {
 	function checkAnswer(i) {
 		if (answers[i] == correctanswer){
 			console.log("right answer!")
-			setcurrentscore(currentscore => currentscore+1)
+			setcurrentscore(currentscore+1)
 		}else{
 			console.log("you dummy")
 			console.log(currentscore)
@@ -72,14 +70,19 @@ function StartQuiz() {
 
 	
 	useEffect(() => {
-		getquestions()
-			
+		console.log(currentscore)
+		if (questions.length == 0){
+			getquestions()
+		}
+		if ( quizfinished == true){
+			gamesOver()
+		}			
 		return (
 			<div>
 			{currentquestion}
 			</div>
 		)
-	},[quizfinished])
+	},[quizfinished, currentscore])
 	
 	return (
 		<div>
