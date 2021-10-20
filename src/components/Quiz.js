@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import '../App.css';
 import NavBar from './NavBar';
+import { ButtonGroup} from 'react-bootstrap';
 
 
 
@@ -82,16 +83,18 @@ function StartQuiz() {
 	
 	return (
 		<div>
-			<NavBar />
 		<div>
+			<NavBar />
+		</div>
 		{currentquestion}
 		<Button onClick={() => playquiz()}>Next question</Button>
 		<br /><br /><br />
-		<li><Button onClick={() => checkAnswer(0)}>{answers[0]}</Button></li>
-		<li><Button onClick={() => checkAnswer(1)}>{answers[1]}</Button></li>
-		<li><Button onClick={() => checkAnswer(2)}>{answers[2]}</Button></li>
-		<li><Button onClick={() => checkAnswer(3)}>{answers[3]}</Button></li>
-		</div>
+		<ButtonGroup className="ButtonGroup" vertical block style={{display: 'flex', alignItems: 'center', justifyContent: 'center',maxWidth: '100%'}}> 
+		<Button onClick={() => checkAnswer(0)}>{answers[0]}</Button>
+		<Button onClick={() => checkAnswer(1)}>{answers[1]}</Button>
+		<Button onClick={() => checkAnswer(2)}>{answers[2]}</Button>
+		<Button onClick={() => checkAnswer(3)}>{answers[3]}</Button>
+		</ButtonGroup>
 		</div>
 	)
 }

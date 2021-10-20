@@ -28,7 +28,7 @@ function Navbar() {
                 )}</button>
 
                 <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-                    <NavLink to="/home" className='inactive' id="a">Home</NavLink>
+                    <NavLink to="/" className='inactive' id="a">Home</NavLink>
                     <NavLink to="/profile" className='inactive' id='a' >Profile</NavLink>
                 </ul>
             </div>
