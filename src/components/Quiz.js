@@ -89,17 +89,23 @@ function StartQuiz() {
 		<div>
 			<NavBar />
 		</div>
+		<div style={{height: '100%', color: 'whitesmoke', 'text-align':'center'}}>
 		{currentquestion}
 		{ correctanswer !=null ? null : <Button onClick={() =>  playquiz()}>Start Quiz </Button>}  
 		
 		<br /><br /><br />
-		<ButtonGroup className="ButtonGroup" vertical block style={{display: 'flex', alignItems: 'center', justifyContent: 'center',maxWidth: '100%'}}> 
-		<Button onClick={() => checkAnswer(0)}>{answers[0]}</Button>
-		<Button onClick={() => checkAnswer(1)}>{answers[1]}</Button>
-		<Button onClick={() => checkAnswer(2)}>{answers[2]}</Button>
-		<Button onClick={() => checkAnswer(3)}>{answers[3]}</Button>
+		{ correctanswer !=null ? 
+		<ButtonGroup className="ButtonGroup" vertical block style={{display: 'flex', alignItems: 'center', justifyContent: 'center',maxWidth: '90%', 'margin-bottom' : '15px'}}> 
+		<Button onClick={() => checkAnswer(0)}>{answers[0]}</Button><br />
+		<Button onClick={() => checkAnswer(1)}>{answers[1]}</Button><br />
+		<Button onClick={() => checkAnswer(2)}>{answers[2]}</Button><br />
+		<Button onClick={() => checkAnswer(3)}>{answers[3]}</Button><br />
 		</ButtonGroup>
+		: null}
 		</div>
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		</div>
+		
 	)
 }
 

@@ -299,6 +299,7 @@ margin-bottom: 10%;
   width: auto;
   flex-direction: row;
   display: flex;
+	margin-bottom: '15px';
 }
 
 .QuizLink {
