@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import '../App.css';
 import NavBar from './NavBar';
 import { ButtonGroup} from 'react-bootstrap';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 
 
@@ -34,7 +36,6 @@ function StartQuiz() {
 	function gamesOver() {
 		console.log("Your score is: ")
 		console.log(currentscore)
-		//setquizfinished(true)
 	}
 
 	
@@ -60,9 +61,7 @@ function StartQuiz() {
 			setcurrentscore(currentscore+1)
 		}else{
 			console.log("you dummy")
-			console.log(currentscore)
 		}
-		console.log(currentscore)
 		setquestioncounter(questioncounter+=1)
 		playquiz()
 
@@ -89,21 +88,26 @@ function StartQuiz() {
 		<div>
 			<NavBar />
 		</div>
-		<div style={{height: '100%', color: 'whitesmoke', 'text-align':'center'}}>
+		<div style={{height: '100%', color: 'whitesmoke', 'textAlign':'center'}}>
+		{ quizfinished != true ? <div>
 		{currentquestion}
 		{ correctanswer !=null ? null : <Button onClick={() =>  playquiz()}>Start Quiz </Button>}  
 		
 		<br /><br /><br />
 		{ correctanswer !=null ? 
-		<ButtonGroup className="ButtonGroup" vertical block style={{display: 'flex', alignItems: 'center', justifyContent: 'center',maxWidth: '90%', 'margin-bottom' : '15px'}}> 
+		<ButtonGroup className="ButtonGroup" vertical block style={{display: 'flex', alignItems: 'center', justifyContent: 'center',maxWidth: '90%', 'marginBottom' : '15px'}}> 
 		<Button onClick={() => checkAnswer(0)}>{answers[0]}</Button><br />
 		<Button onClick={() => checkAnswer(1)}>{answers[1]}</Button><br />
 		<Button onClick={() => checkAnswer(2)}>{answers[2]}</Button><br />
 		<Button onClick={() => checkAnswer(3)}>{answers[3]}</Button><br />
 		</ButtonGroup>
 		: null}
+		</div> : <div> 
+			<Link to={{ pathname: `/`}}><Button><div>Return Home</div></Button></Link>
+		<Popup modal trigger={<Button>Submit Quiz</Button>}> <div>Your score was {currentscore}</div> </Popup>
+		</div>}  
 		</div>
-		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 		</div>
 		
 	)
