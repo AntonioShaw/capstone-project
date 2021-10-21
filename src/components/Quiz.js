@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import '../App.css';
 import NavBar from './NavBar';
@@ -55,7 +55,7 @@ function StartQuiz() {
 	}
 	
 	function checkAnswer(i) {
-		if (answers[i] == correctanswer){
+		if (answers[i] === correctanswer){
 			console.log("right answer!")
 			setcurrentscore(currentscore+1)
 		}else{
@@ -71,10 +71,10 @@ function StartQuiz() {
 	
 	useEffect(() => {
 		console.log(currentscore)
-		if (questions.length == 0){
+		if (questions.length === 0){
 			getquestions()
 		}
-		if ( quizfinished == true){
+		if ( quizfinished === true){
 			gamesOver()
 		}			
 		return (
@@ -90,7 +90,8 @@ function StartQuiz() {
 			<NavBar />
 		</div>
 		{currentquestion}
-		<Button onClick={() => playquiz()}>Next question</Button>
+		{ correctanswer !=null ? null : <Button onClick={() =>  playquiz()}>Start Quiz </Button>}  
+		
 		<br /><br /><br />
 		<ButtonGroup className="ButtonGroup" vertical block style={{display: 'flex', alignItems: 'center', justifyContent: 'center',maxWidth: '100%'}}> 
 		<Button onClick={() => checkAnswer(0)}>{answers[0]}</Button>
