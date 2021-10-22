@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import HomeButton from './homebutton.jsx'
 import UserHighScore from './UserHighScore.jsx'
@@ -10,29 +10,32 @@ import Leaderboard from "./Leaderboard.js";
 
 
 function Profile(props) {
+    let search = window.location.search;
+let params = new URLSearchParams(search);
+let wizardName = params.get('username');
 	
-//     const [myScore, setMyScore] = useState([])
+     const [myScore, setMyScore] = useState()
 
-  
-//  useEffect(() => { getMyScore() }, [])
-//  const name = localStorage.getItem('name')
-//   const getMyScore = () => {
-    
-//    const username = name
-//     console.log(name)
-//     fetch(`https://quiz-wiz-server.glitch.me/api/userscore/${username}`)
-//       .then(response => response.json())
-//       .then(myScore => {
-//         console.log(myScore)
-
-//         setMyScore(myScore)
-//       })
-//   }
+    async function getuserscore(){
+        await fetch(`https://quiz-wiz-server.glitch.me/api/userscore?username=${wizardName}`)
+        .then(response => response.json())
+        .then(myScore => {
+          console.log(myScore.score)
+ 
+          setMyScore(myScore.score)
+        })
+    }
+ 
+ 
 
   const [leaderboard, setLeaderboard] = useState([])
 
   
-  useEffect(() => { getLeaderboard() }, [])
+  useEffect(() => {
+       getLeaderboard() 
+       getuserscore()
+    
+    }, [])
 
   const getLeaderboard = (props) => {
     fetch('https://quiz-wiz-server.glitch.me/api/highscore')
@@ -72,8 +75,8 @@ function Profile(props) {
                 </a>
                 </div>                    
                 <div id='info-container'>
-                   Hello "Wizard"<br></br>
-                   Your current high score is "myScore"
+                   Hello {wizardName}<br></br>
+                   Your current high score is {myScore}
                 </div>
                 <Link to={'/logout'}><Button variant="primary">Log Out</Button></Link>
 		<Link to={'/deleteprofile'}><Button variant="danger">Delete Account</Button></Link>
