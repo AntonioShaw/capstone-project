@@ -18,6 +18,10 @@ function StartQuiz() {
   let [quizfinished, setquizfinished] = useState(false);
   let currentanswers = [];
   let [currentscore, setcurrentscore] = useState(0);
+  let [finalscore, setfinalscore] = useState(0);
+  let finaltempscore = 0
+  let [highscore, sethighscore] = useState(0);
+
 
   function getquestions() {
     fetch(`https://quiz-wiz-server.glitch.me/quiz/${params["category"]}`)
@@ -30,8 +34,24 @@ function StartQuiz() {
   }
 
   function gamesOver() {
-    console.log("Your score is: ");
-    console.log(currentscore);
+    
+    finaltempscore = currentscore*50
+    setfinalscore(finaltempscore)
+    console.log(finaltempscore)
+    
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: JSON.stringify({"userName": "bobby", "score": finaltempscore}),
+      redirect: 'follow'
+    };
+    
+    fetch("http://quizwiz.glitch.me/api/submit", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
   }
 
   function playquiz() {
@@ -160,7 +180,13 @@ function StartQuiz() {
             </Link>
             <Popup modal trigger={<Button>Submit Quiz</Button>}>
               {" "}
-              <div>Your score was {currentscore}</div>{" "}
+              <div>
+              <h1>Good Job!</h1>
+              Your score was {finalscore}<br />
+              Your current high score is {highscore}
+              
+          </div>
+          {" "}
             </Popup>
           </div>
         )}
