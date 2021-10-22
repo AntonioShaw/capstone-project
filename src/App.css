@@ -279,6 +279,11 @@ margin-bottom: 10%;
   border-radius: 15px;
 }
   
+#message{
+  text-align: center;
+  color: silver;
+  font-size: 25px;
+}
 
 #google{
   display: flex;

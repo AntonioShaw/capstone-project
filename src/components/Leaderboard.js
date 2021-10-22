@@ -59,7 +59,7 @@ function Leaderboard(props) {
 					<Carousel.Item>
 						<img
 							className="d-block w-100"
-							src="leaderboardslider1.png" fluid
+							src="QuizWizGold.png" fluid
 							alt="First slide"
 						/>
 						<Carousel.Caption id="carousel-caption">
@@ -71,7 +71,7 @@ function Leaderboard(props) {
 					<Carousel.Item>
 						<img
 							className="d-block w-100"
-							src="leaderboardslider1.png" fluid
+							src="QuizWizSilver.png" fluid
 							alt="Second slide"
 						/>
 						<Carousel.Caption id="carousel-caption">
@@ -83,7 +83,7 @@ function Leaderboard(props) {
 					<Carousel.Item>
 						<img
 							className="d-block w-100"
-							src="leaderboardslider1.png" fluid
+							src="QuizWizBronze.png" fluid
 							alt="Third slide"
 						/>
 						<Carousel.Caption id="carousel-caption">
