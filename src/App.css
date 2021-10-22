@@ -344,7 +344,6 @@ margin-bottom: 10%;
 #top-container{
   /* display:flex; */
   justify-content: left;
-  padding: 10px;
   height: fit-content;
 }
 
@@ -358,8 +357,18 @@ margin-bottom: 10%;
   height: 84vh;
 }
 
-#avatar-container{
- 
+#myavatar{
+  
+    margin: 2px;
+}
+
+#avatar{
+  background: white;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 5%;
+  border:solid;
+  width: 20%
 }
 
 #profile-container{
@@ -374,6 +383,14 @@ color:whitesmoke
 #leaderboard-container{
   margin-top: 100px;
 }
+
+#top-ten{
+  background-color: blue;
+  color:white;
+  border:solid;
+  font-size: x-small;
+}
+
 
 
 /*************REGISTRATION PAGE****************/
@@ -390,6 +407,23 @@ color:whitesmoke
   text-decoration: none;
   margin-top: 20px;
   font-size: x-large;
+}
+
+/***********Leaderboard***********/
+#leaderboard-body{
+  height:100vh;
+  
+}
+#carousel-caption{
+  color:blue;
+  
+}
+#leaderboard-title{
+  color:white;
+  font-size: 50px;
+  text-align: center;
+  margin-top:5vh;
+  margin-bottom: 10vh;
 }
 
 /*********** from 0px - 284px ***********/
