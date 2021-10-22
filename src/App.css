@@ -239,6 +239,23 @@ margin-bottom: 10%;
 }
 /* Navigation bar settings end. */
 
+.quizQuestion {
+  background: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  color: silver;
+  flex-direction: row;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  opacity: 1;
+  border: 2px solid silver;
+  width: 100%;
+  padding: 10px;
+  minWidth: 325px;
+  border-radius: 8px;
+}
+
 /* Media queries. */
 @media (max-device-width:1024px) {
   #buttonBox{

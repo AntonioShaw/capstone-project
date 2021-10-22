@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
-import { faBook, faBrain, faCalculator, faFilm, faFootballBall, faGamepad, faGem, faGlobeAmericas, faMouse, faMusic, faQuestion, faTv, } from '@fortawesome/free-solid-svg-icons';
+import { faAnkh, faBolt, faBook, faBrain, faBook, faBrain, faFilm, faFootballBall, faGamepad, faGlobeAmericas, faMouse, faMusic, faQuestion, faTv, } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -96,10 +96,10 @@ function HomePage() {
                                 <div className="QuizButtonText">Computers</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/19`}}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/20`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faCalculator}/>
-                                <div className="QuizButtonText">Math</div></div>
+                                <FontAwesomeIcon icon={faAnkh}/>
+                                <div className="QuizButtonText">Mythology</div></div>
                             </Button>
                         </Link>
                         <Link className="QuizLink" to={{ pathname: `/quiz/21`}}>
@@ -114,10 +114,10 @@ function HomePage() {
                                 <div className="QuizButtonText">Geography</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/26`}}>
+                        <Link className="QuizLink" to={{ pathname: `/quiz/29`}}>
                             <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faGem}/>
-                                <div className="QuizButtonText">Celebrities</div></div>
+                                <FontAwesomeIcon icon={faBolt}/>
+                                <div className="QuizButtonText">Comics</div></div>
                             </Button>
                         </Link>
                         <Link className="QuizLink" to={{ pathname: `/quiz/100`}}>
