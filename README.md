@@ -14,7 +14,7 @@ __________________________________________________
 __________________________________________________
 
 ## Website description:
-My group wished to create a fun mobile centric based web app taht would allows users to compete for spots on our leaderboard with the scores from the quizzes they take.
+My group wished to create a fun mobile centric based web app that would allows users to compete for spots on our leaderboard with the scores from the quizzes they take.
  
 __________________________________________________
 
@@ -34,6 +34,7 @@ __________________________________________________
   
 **Deployed with:**  
   *Replit*
+  
   *Glitch.com*
 _________________________________
 # Developers: #
