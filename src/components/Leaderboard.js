@@ -26,28 +26,24 @@ function Leaderboard(props) {
 		padding: '10px',
 		minWidth: '325px'
 	}
-	const [leaderboard, setLeaderboard] = useState([])
-
+	const [firstPlace, setfirstPlace] = useState([])
+	const [secondPlace, setsecondPlace] = useState([])
+	const [thirdPlace, setthirdPlace] = useState([])
+	
 	useEffect(() => { getLeaderboard() }, [])
 	const getLeaderboard = (props) => {
 		fetch('https://quiz-wiz-server.glitch.me/api/highscore')
 			.then(response => response.json())
 			.then(result => {
 				console.log(result)
-				setLeaderboard(result)
+				setfirstPlace(result[0])
+				setsecondPlace(result[1])
+				setthirdPlace(result[2])
 				console.log(leaderboard)
 			}
-			)
+		)
 	}
 
-	const leaderboardList = leaderboard.map((score, index) => {
-		return (
-			<ul key={index} >
-				<h1>Wizard:{score.username}</h1>
-				<h3>High Score:{score.score}</h3>
-			</ul>
-		)
-	})
 	return (
 
 
@@ -64,8 +60,8 @@ function Leaderboard(props) {
 						/>
 						<Carousel.Caption id="carousel-caption">
 							<h3>First Place QuizWiz</h3>
-							<p>You are the Gandalf of all the quiz wizards, a true Quizard!</p>
-							{leaderboardList}
+							<p>&#8205; &#8205; &#8205; &#8205; &#8205; &#8205; &#8205; &#8205; You are the Gandalf of all the quiz wizards, a true Quizard!</p>
+							{firstPlace.username} : {firstPlace.score}
 						</Carousel.Caption>
 					</Carousel.Item>
 					<Carousel.Item>
@@ -77,7 +73,7 @@ function Leaderboard(props) {
 						<Carousel.Caption id="carousel-caption">
 							<h3>Second Place QuizWiz</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							{leaderboardList}
+							{secondPlace.username} : {secondPlace.score}
 						</Carousel.Caption>
 					</Carousel.Item>
 					<Carousel.Item>
@@ -89,7 +85,7 @@ function Leaderboard(props) {
 						<Carousel.Caption id="carousel-caption">
 							<h3>Third Place QuizWiz</h3>
 							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-							{leaderboardList}
+							{thirdPlace.username} : {thirdPlace.score}
 						</Carousel.Caption>
 					</Carousel.Item>
 				</Carousel>
