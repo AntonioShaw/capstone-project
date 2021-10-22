@@ -31,6 +31,7 @@ function Navbar() {
                     <NavLink to="/" className='inactive' id="a">Home</NavLink>
                     <NavLink to="/profile" className='inactive' id='a' >Profile</NavLink>
                 </ul>
+                <img src="QuizWizNav2.png" alt="QuizWiz Logotype"/>
             </div>
         </nav>
     )
