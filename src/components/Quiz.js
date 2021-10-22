@@ -7,6 +7,7 @@ import { ButtonGroup } from "react-bootstrap";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
+//constwizardName = localStorage.getItem ('wizardName')
 function StartQuiz() {
   const params = useParams();
 

@@ -23,7 +23,7 @@ function Profile(props) {
         .then(response => response.json())
         .then(myScore => {
           console.log(myScore.score)
- 
+					localStorage.setItem("wizardName",wizardName )
           setMyScore(myScore.score)
         })
     }

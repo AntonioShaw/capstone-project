@@ -26,8 +26,8 @@ function App() {
       }}
     >
       <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route exact path="/login" component={login} />
+      <Route exact path="/homepage" component={HomePage} />
+      <Route exact path="/" component={login} />
       <Route exact path="/register" component={register} />
       <Route exact path="/profile/:username" component={Profile} />
       <Route exact path="/leaderboard" component={Leaderboard} />
