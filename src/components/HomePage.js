@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
-import { faAnkh, faBolt, faBook, faBrain, faBook, faBrain, faFilm, faFootballBall, faGamepad, faGlobeAmericas, faMouse, faMusic, faQuestion, faTv, } from '@fortawesome/free-solid-svg-icons';
+import { faAnkh, faBolt, faBook, faBrain, faFilm, faFootballBall, faGamepad, faGlobeAmericas, faMouse, faMusic, faQuestion, faTv, } from '@fortawesome/free-solid-svg-icons';
 
 
 
