@@ -36,8 +36,9 @@ function StartQuiz() {
   }
 
   function gamesOver() {
-    
-    finaltempscore = currentscore*27*14
+    let randomizer = Math.floor(Math.random() * 72)
+		console.log(randomizer)
+    finaltempscore = currentscore*7*randomizer
     setfinalscore(finaltempscore)
     console.log(finaltempscore)
 
