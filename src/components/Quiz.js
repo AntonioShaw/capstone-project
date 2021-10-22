@@ -7,7 +7,6 @@ import { ButtonGroup } from "react-bootstrap";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
-//constwizardName = localStorage.getItem ('wizardName')
 function StartQuiz() {
   const params = useParams();
 
@@ -22,6 +21,8 @@ function StartQuiz() {
   let [finalscore, setfinalscore] = useState(0);
   let finaltempscore = 0
   let [highscore, sethighscore] = useState(0);
+  let [wizardName, setwizardName] = useState("");
+
 
 
   function getquestions() {
@@ -36,20 +37,29 @@ function StartQuiz() {
 
   function gamesOver() {
     
-    finaltempscore = currentscore*50
+    finaltempscore = currentscore*27*14
     setfinalscore(finaltempscore)
     console.log(finaltempscore)
+
+		fetch("https://quiz-wiz-server.glitch.me/api/userscore?username="+wizardName)
+    .then(response => response.json())
+    .then(result => {
+			console.log("users high score is:"+result.score)
+			sethighscore(result.score)
+			
+			})
+    .catch(error => console.log('error', error));
     
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     var requestOptions = {
       method: 'POST',
       headers: myHeaders,
-      body: JSON.stringify({"userName": "bobby", "score": finaltempscore}),
+      body: JSON.stringify({"userName": wizardName, "score": finaltempscore}),
       redirect: 'follow'
     };
     
-    fetch("http://quizwiz.glitch.me/api/submit", requestOptions)
+    fetch("https://quizwiz.glitch.me/api/submit", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
@@ -123,6 +133,8 @@ function StartQuiz() {
   }
 
   useEffect(() => {
+		setwizardName(localStorage.getItem ('wizardName'))
+		console.log(wizardName)
     console.log(currentscore);
     if (questions.length === 0) {
       getquestions();
@@ -131,7 +143,7 @@ function StartQuiz() {
       gamesOver();
     }
     return <div>{currentquestion}</div>;
-  }, [quizfinished, currentscore]);
+  }, [quizfinished, currentscore, highscore]);
 
   return (
     <div>
@@ -174,7 +186,7 @@ function StartQuiz() {
           </div>
         ) : (
           <div>
-            <Link to={{ pathname: `/` }}>
+            <Link to={{ pathname: `/homepage` }}>
               <Button>
                 <div>Return Home</div>
               </Button>
@@ -184,7 +196,7 @@ function StartQuiz() {
               <div>
               <h1>Good Job!</h1>
               Your score was {finalscore}<br />
-              Your current high score is {highscore}
+              Your previous high score is {highscore}
               
           </div>
           {" "}

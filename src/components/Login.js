@@ -75,13 +75,7 @@ function Login(props) {
                 </a>
                 
 
-                <a id="instagram-btn" href="https://quiz-wiz-server.glitch.me/auth/instagram">
-                <a href="https://quiz-wiz-server.glitch.me/auth/instagram">
-                    <img id="icon" src={instagramLogo} alt="Login With Instagram"  style={{ backgroundColor: "#d9317a" }}></img>
-                </a>
-                <div id="instagram">Login With Instagram</div>
-                </a>
-
+                
                 <a id="facebook-btn" href="https://quiz-wiz-server.glitch.me/auth/facebook">
                 <a href="https://quiz-wiz-server.glitch.me/auth/facebook">
                     <img id="icon" src={facebookLogo} alt="Login With Facebook"  style={{ backgroundColor: "#3B5899" }}></img>

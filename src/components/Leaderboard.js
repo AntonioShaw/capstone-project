@@ -39,7 +39,6 @@ function Leaderboard(props) {
 				setfirstPlace(result[0])
 				setsecondPlace(result[1])
 				setthirdPlace(result[2])
-				console.log(leaderboard)
 			}
 		)
 	}
