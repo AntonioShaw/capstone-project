@@ -140,7 +140,7 @@ function StartQuiz() {
       <div style={{ height: "100%", color: "whitesmoke", textAlign: "center" }}>
         {quizfinished != true ? (
           <div>
-            {currentquestion}
+            <div className = "quizQuestion"> {currentquestion}</div>
             {correctanswer != null ? null : (
               <Button onClick={() => playquiz()}>Start Quiz </Button>
             )}
