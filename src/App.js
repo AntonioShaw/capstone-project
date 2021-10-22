@@ -29,7 +29,7 @@ function App() {
       <Route exact path="/" component={HomePage} />
       <Route exact path="/login" component={login} />
       <Route exact path="/register" component={register} />
-      <Route exact path="/profile" component={Profile} />
+      <Route exact path="/profile/:username" component={Profile} />
       <Route exact path="/leaderboard" component={Leaderboard} />
       <Route exact path="/quiz/:category" component={Quiz} />
       </Switch>
