@@ -177,7 +177,7 @@ margin-bottom: 10%;
 /* Navigation Bar settings follow. */
 
 .navBar{
-  height: 50px;
+  height: auto;
   width: 100%;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -359,7 +359,7 @@ margin-bottom: 10%;
 }
 
 #bottom-container{
-  height: 84vh;
+  height: 100%;
 }
 
 #myavatar{
