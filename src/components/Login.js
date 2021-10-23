@@ -41,7 +41,7 @@ function Login(props) {
                     localStorage.setItem('jsonwebtoken', token)
                     localStorage.setItem('user_Id', result.user_id)
                     localStorage.setItem('name', result.name)
-                    props.history.push('/profile/'+result.name)
+                    props.history.push('profile/'+result.name)
 
                 }
                 else {
