@@ -48,7 +48,7 @@ function Register(props) {
             <input className="log-RegText" type="text" name="userName" onChange={handleRegisterChange} placeholder=" Enter Desired User name"  /><br></br>
             <input className="log-RegText" type="password" name="password" onChange={handleRegisterChange} placeholder="Enter Desired Password" /><br></br>
             <button className="log-Btn" onClick={handleRegisterButton}>Submit</button>
-            <NavLink to="/login" className='logLink'>Back to Login</NavLink>
+            <NavLink to="/" className='logLink'>Back to Login</NavLink>
         </div>
     )
 }
