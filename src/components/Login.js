@@ -23,7 +23,7 @@ function Login(props) {
 
     const handleLoginButton = () => {
        
-        fetch('https://quiz-wiz-server.glitch.me/api/login', {
+        fetch('https://quiz-wiz-server.glitch.me/api/login',{
             method: 'POST',
             origin: '*',
             headers: {
@@ -41,7 +41,7 @@ function Login(props) {
                     localStorage.setItem('jsonwebtoken', token)
                     localStorage.setItem('user_Id', result.user_id)
                     localStorage.setItem('name', result.name)
-                    props.history.push('/')
+                    props.history.push('/profile/'+result.name)
 
                 }
                 else {
