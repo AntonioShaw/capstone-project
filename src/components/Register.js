@@ -28,7 +28,7 @@ function Register(props) {
 
             .then(result => {
                 if (result.success) {
-                    props.history.push('/login')
+                    props.history.push('/')
                 }
 
 
