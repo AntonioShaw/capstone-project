@@ -177,7 +177,7 @@ margin-bottom: 10%;
 /* Navigation Bar settings follow. */
 
 .navBar{
-  height: 50px;
+  height: auto;
   width: 100%;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -236,6 +236,15 @@ margin-bottom: 10%;
 
 .menuNav li:first-child {
   margin-top: 7rem;
+}
+
+#logotype {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  align-self: center;
+  
 }
 /* Navigation bar settings end. */
 
@@ -359,7 +368,7 @@ margin-bottom: 10%;
 }
 
 #bottom-container{
-  height: 84vh;
+  height: 100%;
 }
 
 #myavatar{
@@ -378,7 +387,8 @@ margin-bottom: 10%;
 
 #profile-container{
   padding:10px;
-  margin-top:55px
+  margin-top:55px;
+  height: auto;
 }
 
 #info-container{
@@ -390,10 +400,20 @@ color:whitesmoke
 }
 
 #top-ten{
-  background-color: blue;
-  color:white;
-  border:solid;
-  font-size: x-small;
+  background: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  color: silver;
+  flex-direction: row;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  opacity: 1;
+  border: 2px solid silver;
+  width: 90%;
+  padding: 10px;
+  minWidth: 325px;
+  border-radius: 8px;
 }
 
 
