@@ -7,7 +7,7 @@
 display: flex;
 justify-content: center;
 padding-top: 5%;
-font-size: 50px;
+font-size: 100px;
 font-weight: bold;
 background: -webkit-linear-gradient( #000 15%, #3a3737 51%, #fff 100%);
 -webkit-background-clip: text;
@@ -15,7 +15,7 @@ background: -webkit-linear-gradient( #000 15%, #3a3737 51%, #fff 100%);
 margin-left: auto;
 margin-right: auto;
 
-margin-bottom: 10%;
+margin-bottom: 2%;
 }
 
 .log-Btn{
@@ -55,7 +55,6 @@ margin-bottom: 10%;
 }
 
 .log-RegText{
-  width: 75%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
@@ -568,7 +567,6 @@ color:whitesmoke
   width:60%;
  }
 
- .log-RegText{
   width: 60%;
 }
 
