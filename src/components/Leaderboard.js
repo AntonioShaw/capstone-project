@@ -59,7 +59,7 @@ function Leaderboard(props) {
 						/>
 						<Carousel.Caption id="carousel-caption">
 							<h3>First Place QuizWiz</h3>
-							<p>&#8205; &#8205; &#8205; &#8205; &#8205; &#8205; &#8205; &#8205; You are the Gandalf of all the quiz wizards, a true Quizard!</p>
+							<p>You are the Gandalf of all the quiz wizards, a true Quizard!</p>
 							{firstPlace.username} : {firstPlace.score}
 						</Carousel.Caption>
 					</Carousel.Item>
