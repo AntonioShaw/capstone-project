@@ -33,7 +33,7 @@ function Navbar() {
 		    <NavLink to={'profile/'+localStorage.getItem('wizardName')} className='inactive' id='a' >Profile</NavLink>
                 </ul>
                 <img id="logotype" src="/QuizWizNav2.png" alt="QuizWiz Logotype"/>
-            </div>
+              </div>
         </nav>
     )
 }
