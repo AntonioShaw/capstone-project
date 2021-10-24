@@ -7,7 +7,7 @@
 display: flex;
 justify-content: center;
 padding-top: 5%;
-font-size: 50px;
+font-size: 100px;
 font-weight: bold;
 background: -webkit-linear-gradient( #000 15%, #3a3737 51%, #fff 100%);
 -webkit-background-clip: text;
@@ -15,32 +15,10 @@ background: -webkit-linear-gradient( #000 15%, #3a3737 51%, #fff 100%);
 margin-left: auto;
 margin-right: auto;
 
-margin-bottom: 10%;
+margin-bottom: 2%;
 }
 
-.log-Btn{
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  background-image: linear-gradient(to right, #000 0%, #808080 51%, #fff 100%);
-    font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 20px;
-    padding: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: #FFF;
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    width: 200px;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    cursor: pointer;
-    display: inline-block;
-}
+
 
 .logBtn:hover{
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -55,10 +33,10 @@ margin-bottom: 10%;
 }
 
 .log-RegText{
-  width: 75%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 2px solid ;
   padding: 10px;
   box-shadow: 0 15px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -85,20 +63,43 @@ margin-bottom: 10%;
   margin: 5%;
   height: 44px;
 }
-
+.log-Btn{
+ 
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #000 0%, #808080 51%, #fff 100%);
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    
+    width: 200px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+}
 
 
 #google-btn{
   display: flex;
   color: white;
   background-color: #cb4024;
-  width:75%;
-  height: 50px;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
   border-radius: 10px;
-  border-radius: 2px;
+  height: 50px;
+ 
+  margin-top: 60px;
+  
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
   transition: all ease-in-out .6s;
   text-decoration: none;
@@ -111,17 +112,18 @@ margin-bottom: 10%;
 #instagram-btn{
   display: flex;
   color: white;
-  border-radius: 10px;
-  width:75%;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  border-radius: 10px;
-  border-radius: 2px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
   background-size: 200%auto;  
   background-image: linear-gradient(to right,#6559ca 5%, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  border-radius: 10px;
+   width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  height: 50px;
+  margin-top: 10px;
+  
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  
   transition: all ease-in-out .6s;
   text-decoration: none;
 }
@@ -135,13 +137,13 @@ margin-bottom: 10%;
   display: flex;
   color: white;
   background-color: #4168bb;
-  width:75%;
-  height: 50px;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
   border-radius: 10px;
-  border-radius: 2px;
+  height: 50px;
+  margin-top: 10px;
+ 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
   transition: all ease-in-out .6s;
   text-decoration: none;
@@ -156,13 +158,13 @@ margin-bottom: 10%;
   display: flex;
   color: white;
   background-color: black;
-  width:75%;
+  width:30%;
   height: 50px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   border-radius: 10px;
-  border-radius: 2px;
+  
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
   transition: all ease-in-out .6s;
   text-decoration: none;
@@ -171,6 +173,10 @@ margin-bottom: 10%;
 
 #github-btn:hover {
   transform: translateY(-10px);
+}
+
+#leaderboardSliderImage {
+  max-width: 10%;
 }
 
 
@@ -224,16 +230,22 @@ margin-bottom: 10%;
   height: min-content;
   border-radius: 8px;
 }
-
+.message{
+  text-align: center;
+  font-size: x-large;
+  color:red
+}
 #a{
   display: block;
   padding: 10px 40px;
   text-decoration: none;
-  color: navy;
+  color: white;
   text-transform: uppercase;
   font-weight: bold;
 }
-
+#logout-btn{
+  margin-left: 5%;
+}
 .menuNav li:first-child {
   margin-top: 7rem;
 }
@@ -380,9 +392,11 @@ margin-bottom: 10%;
   background: white;
   border-radius: 2px;
   display: inline-block;
-  margin: 5%;
+  margin-left: 5%;
+  margin-bottom: 2%;
   border:solid;
-  width: 20%
+  width: 22%;
+ 
 }
 
 #profile-container{
@@ -392,7 +406,8 @@ margin-bottom: 10%;
 }
 
 #info-container{
-color:whitesmoke
+color:whitesmoke;
+margin-left: 5%;
 }
 
 #leaderboard-container{
@@ -464,26 +479,51 @@ color:whitesmoke
 
 @media only screen  and (min-device-width : 285px) and (max-device-width : 320px){
 #login-title{
-  padding-top: 0%;
+  padding-top: 20%;
   margin-bottom: 0%;
   font-size: 40px;
   }
+  #slider-image{
+      height: 250px;
+      margin-left: 9%
+   }
 
 }
-@media only screen and (min-device-width : 321px) and (max-device-width : 359px){
+@media only screen and (min-device-width : 321px) and (max-device-width : 375px){
   #login-title{
     padding-top: 2%;
     margin-bottom: 5%;
+    font-size: 60px;
     }
+    #slider-image{
+      height: 250px;
+      margin-left: 14%
+   }
 }
 
-@media only screen and (min-device-width : 360px) and (max-device-width : 413px) {
+@media only screen and (min-device-width : 376px) and (max-device-width : 400px) {
   #login-title{
     margin-bottom: 6%;
     }
+     #slider-image{
+      height: 300px;
+      margin-left: 7%
+   }
 }
-
+@media only screen and (min-device-width : 401px) and (max-device-width : 413px) {
+  #login-title{
+    margin-bottom: 6%;
+    }
+     #slider-image{
+      height: 300px;
+      margin-left: 13%;
+   }
+}
 @media only screen and (min-device-width : 414px) and (max-device-width : 480px) {
+    #slider-image{
+      height: 300px;
+      margin-left: 14%
+   }
   #login-title{
     margin-bottom: 6%;
     padding-top: 10%;
@@ -497,20 +537,33 @@ color:whitesmoke
     padding-top: 15%;
 
     }
+    #slider-image{
+      height: 600px;
+      margin-left: 12%
+   }
 }
 
 @media only screen and (min-device-width : 769px) and (max-device-width : 1023px) {
-
+  #slider-image{
+      height: 600px;
+      margin-left: 13%;
+   }
   #login-title{
     margin-bottom: 5%;
   
     padding-top: 15%;
 
     }
+  
 }
 
 
 @media (min-device-width:1024px) and (max-device-width : 1279px){
+#slider-image{
+     
+      margin-left: 12%
+   }
+ 
   #login-title{
     font-size: 80px;
     margin-bottom: 10%;
@@ -546,6 +599,10 @@ color:whitesmoke
 }
 
 @media only screen and (min-device-width:1280px) and (max-device-width:1439px){
+  #slider-image{
+      height: 600px;
+      margin-left: 30%;
+   }
   #login-title{
     font-size: 80px;
     margin-bottom: 3%;
@@ -573,7 +630,17 @@ color:whitesmoke
 }
 
 }
+@media only screen and (min-device-width:1440px) and (max-device-width:2239px){
+  #slider-image{
+      height: 400px;
+      margin-left: 36%
+   }
+}
 @media only screen and (min-device-width:2240px){
+  #slider-image{
+      height: 800px;
+      margin-left: 7%
+   }
   .navBar{
     
     margin-bottom: 2%;

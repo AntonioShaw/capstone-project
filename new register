@@ -17,7 +17,7 @@ function Register(props) {
     }
     const handleRegisterButton = () => {
         
-        fetch('https://quizwiz.glitch.me/api/register', {
+        fetch('https://quiz-wiz-server.glitch.me/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

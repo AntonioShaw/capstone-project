@@ -26,28 +26,23 @@ function Leaderboard(props) {
 		padding: '10px',
 		minWidth: '325px'
 	}
-	const [leaderboard, setLeaderboard] = useState([])
-
+	const [firstPlace, setfirstPlace] = useState([])
+	const [secondPlace, setsecondPlace] = useState([])
+	const [thirdPlace, setthirdPlace] = useState([])
+	
 	useEffect(() => { getLeaderboard() }, [])
 	const getLeaderboard = (props) => {
 		fetch('https://quiz-wiz-server.glitch.me/api/highscore')
 			.then(response => response.json())
 			.then(result => {
 				console.log(result)
-				setLeaderboard(result)
-				console.log(leaderboard)
+				setfirstPlace(result[0])
+				setsecondPlace(result[1])
+				setthirdPlace(result[2])
 			}
-			)
+		)
 	}
 
-	const leaderboardList = leaderboard.map((score, index) => {
-		return (
-			<ul key={index} >
-				<h1>Wizard:{score.username}</h1>
-				<h3>High Score:{score.score}</h3>
-			</ul>
-		)
-	})
 	return (
 
 
@@ -58,38 +53,38 @@ function Leaderboard(props) {
 				<Carousel fade>
 					<Carousel.Item>
 						<img
-							className="d-block w-100"
+							className="leaderboardSliderImage"
 							src="QuizWizGold.png" fluid
 							alt="First slide"
 						/>
 						<Carousel.Caption id="carousel-caption">
 							<h3>First Place QuizWiz</h3>
 							<p>You are the Gandalf of all the quiz wizards, a true Quizard!</p>
-							{leaderboardList}
+							{firstPlace.username} : {firstPlace.score}
 						</Carousel.Caption>
 					</Carousel.Item>
 					<Carousel.Item>
 						<img
-							className="d-block w-100"
+							className="leaderboardSliderImage"
 							src="QuizWizSilver.png" fluid
 							alt="Second slide"
 						/>
 						<Carousel.Caption id="carousel-caption">
 							<h3>Second Place QuizWiz</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							{leaderboardList}
+							<p>good job, you are almost to the top!</p>
+							{secondPlace.username} : {secondPlace.score}
 						</Carousel.Caption>
 					</Carousel.Item>
 					<Carousel.Item>
 						<img
-							className="d-block w-100"
+							className="leaderboardSliderImage"
 							src="QuizWizBronze.png" fluid
 							alt="Third slide"
 						/>
 						<Carousel.Caption id="carousel-caption">
 							<h3>Third Place QuizWiz</h3>
-							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-							{leaderboardList}
+							<p>Not bad, but you can keep pushing!.</p>
+							{thirdPlace.username} : {thirdPlace.score}
 						</Carousel.Caption>
 					</Carousel.Item>
 				</Carousel>
