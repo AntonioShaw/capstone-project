@@ -71,7 +71,7 @@ function Leaderboard(props) {
 						/>
 						<Carousel.Caption id="carousel-caption">
 							<h3>Second Place QuizWiz</h3>
-							<p>Not bad, you are almost to the top!</p>
+							<p>good job, you are almost to the top!</p>
 							{secondPlace.username} : {secondPlace.score}
 						</Carousel.Caption>
 					</Carousel.Item>

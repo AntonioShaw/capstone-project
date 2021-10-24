@@ -75,9 +75,10 @@ function Profile(props) {
     </a>
     </div>                    
     <div id='info-container'>
+		<br /><br />
     Hello {wizardName}<br></br>
     Your current high score is {myScore}
-    </div>
+    </div><br />
     <Link to={'/'}><Button variant="primary">Log Out</Button></Link>
     
     </div>
