@@ -53,6 +53,7 @@ function Leaderboard(props) {
 				<Carousel fade>
 					<Carousel.Item>
 						<img
+							className="leaderboardSliderImage"
 							src="QuizWizGold.png" fluid
 							alt="First slide"
 						/>
@@ -64,23 +65,25 @@ function Leaderboard(props) {
 					</Carousel.Item>
 					<Carousel.Item>
 						<img
+							className="leaderboardSliderImage"
 							src="QuizWizSilver.png" fluid
 							alt="Second slide"
 						/>
 						<Carousel.Caption id="carousel-caption">
 							<h3>Second Place QuizWiz</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<p>Not bad, you are almost to the top!</p>
 							{secondPlace.username} : {secondPlace.score}
 						</Carousel.Caption>
 					</Carousel.Item>
 					<Carousel.Item>
 						<img
+							className="leaderboardSliderImage"
 							src="QuizWizBronze.png" fluid
 							alt="Third slide"
 						/>
 						<Carousel.Caption id="carousel-caption">
 							<h3>Third Place QuizWiz</h3>
-							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+							<p>Not bad, but you can keep pushing!.</p>
 							{thirdPlace.username} : {thirdPlace.score}
 						</Carousel.Caption>
 					</Carousel.Item>

@@ -175,6 +175,10 @@ margin-bottom: 2%;
   transform: translateY(-10px);
 }
 
+#leaderboardSliderImage {
+  max-width: 15%;
+}
+
 
 /* Navigation Bar settings follow. */
 
