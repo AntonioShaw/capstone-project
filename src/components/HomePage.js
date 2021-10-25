@@ -120,12 +120,6 @@ function HomePage() {
                                 <div className="QuizButtonText">Comics</div></div>
                             </Button>
                         </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/100`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faQuestion}/>
-                                <div className="QuizButtonText">Random</div></div>
-                            </Button>
-                        </Link>
                     </ButtonGroup>
                 </Row>
                 </div>
