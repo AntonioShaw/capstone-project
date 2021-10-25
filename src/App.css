@@ -478,96 +478,317 @@ margin-left: 5%;
   }
 
 @media only screen  and (min-device-width : 285px) and (max-device-width : 320px){
-#login-title{
-  padding-top: 20%;
-  margin-bottom: 0%;
-  font-size: 40px;
-  }
-  #slider-image{
-      height: 250px;
-      margin-left: 9%
-   }
-
+  #login-title{
+    margin-bottom: 8%;
+    width: 75%;
+    }
+    #logBody{
+      padding-top: 0%;
+    }
+    
+    .log-RegText {
+      width: 85%;
+      height: 8%;
+      font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 15px;
+      border: 2px solid;
+      padding: 10px;
+     
+    }
+    .log-Btn {
+      height: 50px;
+      width: 55%;
+      font-size: 20px;
+      
+     
+      border-radius: 10px;
+     
+      }   
+      #google-btn{
+        height: 50px;
+        width:70%;
+        margin-top: 2%;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 14px;
+      }
+      
+      #instagram-btn{
+        height: 50px;
+        width:70%;
+        
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 14px;
+      }
+      
+      #facebook-btn{
+        height: 50px;
+        width:70%;
+       
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 13px;
+      }
+      
+      #github-btn{
+        height: 50px;
+        width:70%;
+       
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 14px;
+      }
+      .regLink{
+        font-size: 25px;
+        color: white;
+       
+      }
+  
+  
 }
-@media only screen and (min-device-width : 321px) and (max-device-width : 375px){
+@media only screen and (min-device-width : 321px) and (max-device-width : 359px){
   #login-title{
     padding-top: 2%;
     margin-bottom: 5%;
-    font-size: 60px;
     }
-    #slider-image{
-      height: 250px;
-      margin-left: 14%
-   }
 }
 
-@media only screen and (min-device-width : 376px) and (max-device-width : 400px) {
+@media only screen and (min-device-width : 360px) and (max-device-width : 410px) {
   #login-title{
-    margin-bottom: 6%;
+    margin-bottom: 5%;
+    width: 75%;
     }
-     #slider-image{
-      height: 300px;
-      margin-left: 7%
-   }
+    #logBody{
+      padding-top: 3%;
+    }
+    
+    .log-RegText {
+      width: 85%;
+      height: 11%;
+      font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 15px;
+      border: 2px solid;
+      padding: 10px;
+     
+    }
+    .log-Btn {
+      height: 50px;
+      width: 55%;
+      font-size: 20px;
+      
+      margin-top: 3%;
+      border-radius: 10px;
+     
+      }   
+      #google-btn{
+        height: 50px;
+        width:70%;
+        margin-top: 7%;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 18px;
+      }
+      
+      #instagram-btn{
+        height: 50px;
+        width:70%;
+        
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 18px;
+      }
+      
+      #facebook-btn{
+        height: 50px;
+        width:70%;
+       
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 18px;
+      }
+      
+      #github-btn{
+        height: 50px;
+        width:70%;
+       
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 18px;
+      }
+      .regLink{
+        font-size: 25px;
+        color: white;
+        margin-bottom: 10%;
+      }
+  
+  
+  
 }
-@media only screen and (min-device-width : 401px) and (max-device-width : 413px) {
+
+@media only screen and (min-device-width : 411px) and (max-device-width : 480px) {
   #login-title{
-    margin-bottom: 6%;
+    margin-bottom: 5%;
+    width: 85%;
     }
-     #slider-image{
-      height: 300px;
-      margin-left: 13%;
-   }
-}
-@media only screen and (min-device-width : 414px) and (max-device-width : 480px) {
-    #slider-image{
-      height: 300px;
-      margin-left: 14%
-   }
-  #login-title{
-    margin-bottom: 6%;
-    padding-top: 10%;
+    #logBody{
+      padding-top: 3%;
     }
+    
+    .log-RegText {
+      width: 85%;
+      height: 11%;
+      font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 15px;
+      border: 2px solid;
+      padding: 10px;
+     
+    }
+    .log-Btn {
+      height: 50px;
+      width: 55%;
+      font-size: 20px;
+      
+      margin-top: 3%;
+      border-radius: 10px;
+     
+      }   
+      #google-btn{
+        height: 50px;
+        width:70%;
+        margin-top: 7%;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 18px;
+      }
+      
+      #instagram-btn{
+        height: 50px;
+        width:70%;
+        
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 18px;
+      }
+      
+      #facebook-btn{
+        height: 50px;
+        width:70%;
+       
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 18px;
+      }
+      
+      #github-btn{
+        height: 50px;
+        width:70%;
+       
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 18px;
+      }
+      .regLink{
+        font-size: 25px;
+        color: white;
+        margin-bottom: 10%;
+      }
+  
 }
 
 @media only screen and (min-device-width : 481px) and (max-device-width : 768px) {
   #login-title{
-    margin-bottom: 5%;
-   
-    padding-top: 15%;
-
+    margin-bottom: 8%;
+    width: 85%;
     }
-    #slider-image{
-      height: 600px;
-      margin-left: 12%
-   }
+    #logBody{
+      padding-top: 3%;
+    }
+    
+    .log-RegText {
+      width: 75%;
+      height: 11%;
+      font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 15px;
+      border: 2px solid;
+      padding: 10px;
+     
+    }
+    .log-Btn {
+      height: 50px;
+      width: 40%;
+      font-size: 20px;
+      
+      margin-top: 3%;
+      border-radius: 10px;
+     
+      }   
+      #google-btn{
+        height: 50px;
+        width:50%;
+        margin-top: 12%;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 22px;
+      }
+      
+      #instagram-btn{
+        height: 50px;
+        width:50%;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 22px;
+      }
+      
+      #facebook-btn{
+        height: 50px;
+        width:50%;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 22px;
+      }
+      
+      #github-btn{
+        height: 50px;
+        width:50%;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 22px;
+      }
+      .regLink{
+        font-size: 25px;
+        color: white;
+        margin-bottom: 10%;
+      }
+  
+
 }
 
 @media only screen and (min-device-width : 769px) and (max-device-width : 1023px) {
-  #slider-image{
-      height: 600px;
-      margin-left: 13%;
-   }
+
   #login-title{
     margin-bottom: 5%;
   
     padding-top: 15%;
 
     }
-  
 }
 
 
 @media (min-device-width:1024px) and (max-device-width : 1279px){
-#slider-image{
-     
-      margin-left: 12%
-   }
- 
   #login-title{
     font-size: 80px;
-    margin-bottom: 10%;
+    margin-bottom: 11%;
     padding-top: 20%;
+    width: 60%;
     }
 
   #google-btn{
@@ -599,14 +820,15 @@ margin-left: 5%;
 }
 
 @media only screen and (min-device-width:1280px) and (max-device-width:1439px){
-  #slider-image{
-      height: 600px;
-      margin-left: 30%;
-   }
+  #logBody{
+    padding-top: 15%;
+  }
+  
   #login-title{
     font-size: 80px;
-    margin-bottom: 3%;
+    margin-bottom: 13%;
     padding-top: 2%;
+    width: 65%;
     }
 
   #google-btn{
@@ -628,19 +850,150 @@ margin-left: 5%;
  .log-RegText{
   width: 60%;
 }
+}
+@media only screen and (min-device-width:1440px) and (max-device-width:1720px){
+  #logBody{
+    padding-top: 5%;
+  }
+  #login-title{
+    font-size:100px;
+    padding-top: 0%;
+    margin-bottom: 3%;
+    width: 30%;
+   
+  }
+  .log-RegText {
+    width: 45%;
+    height: 50px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    border: 2px solid;
+    padding: 10px;
+  }
+  .log-Btn {
+    height: 50px;
+    width: 15%;
+    font-size: 20px;
+    
+    margin-top: 10px;
+    border-radius: 10px;
+   
+    }   
+    #google-btn{
+      height: 50px;
+      width:25%;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+    
+    #instagram-btn{
+      height: 50px;
+      width:25%;
+      
+      margin-bottom: 30px;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+    
+    #facebook-btn{
+      height: 50px;
+      width:25%;
+     
+      margin-bottom: 30px;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+    
+    #github-btn{
+      height: 50px;
+      width:25%;
+     
+      margin-bottom: 30px;
+      border-radius: 10px;
+      font-size: 20px;
+    }
 
 }
-@media only screen and (min-device-width:1440px) and (max-device-width:2239px){
-  #slider-image{
-      height: 400px;
-      margin-left: 36%
-   }
+@media only screen and (min-device-width:1721px) and (max-device-width:2000px){
+  #logBody{
+    padding-top: 5%;
+  }
+  #login-title{
+    font-size:100px;
+    padding-top: 0%;
+    margin-bottom: 6%;
+    width: 40%;
+   
+  }
+  .log-RegText {
+    width: 45%;
+    height: 60px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    border: 2px solid;
+    padding: 10px;
+   
+  }
+  .log-Btn {
+    height: 50px;
+    width: 15%;
+    font-size: 20px;
+    
+    margin-top: 3%;
+    border-radius: 10px;
+   
+    }   
+    #google-btn{
+      height: 60px;
+      width:25%;
+      margin-top: 7%;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      font-size: 25px;
+    }
+    
+    #instagram-btn{
+      height: 60px;
+      width:25%;
+      
+      margin-bottom: 30px;
+      border-radius: 10px;
+      font-size: 25px;
+    }
+    
+    #facebook-btn{
+      height: 60px;
+      width:25%;
+     
+      margin-bottom: 30px;
+      border-radius: 10px;
+      font-size: 25px;
+    }
+    
+    #github-btn{
+      height: 60px;
+      width:25%;
+     
+      margin-bottom: 30px;
+      border-radius: 10px;
+      font-size: 25px;
+    }
+    .regLink{
+      font-size: 45px;
+      color: white;
+      margin-bottom: 10%;
+    }
+
+
 }
-@media only screen and (min-device-width:2240px){
-  #slider-image{
-      height: 800px;
-      margin-left: 7%
-   }
+
+@media only screen and (min-device-width:2001px){
   .navBar{
     
     margin-bottom: 2%;
@@ -650,26 +1003,31 @@ margin-left: 5%;
  #login-title{
    font-size:100px;
    padding-top: 0%;
-   margin-bottom: 5%;
+   margin-bottom: 3%;
+   width: 35%;
   
+ }
+ #logBody{
+   padding-top: 4%;
  }
   
  .log-RegText {
-  width: 45%;
+  width: 35%;
   height:75px;
-  font-size: 40px;
+  font-size: 50px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 4px;
+  border-radius: 15px;
   border: 2px solid;
   padding: 10px;
 }
 .log-Btn {
   height: 75px;
   width: 15%;
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom:20px;
   margin-top: 70px;
+  border-radius: 10px;
   }   
 
     
@@ -680,73 +1038,93 @@ margin-left: 5%;
 .logLink{
   font-size: 53px;
 }
+#icon{
+  height: 70px;
+    width: 75px;
+}
 #google-btn{
-  width:20%;
+  height: 75px;
+  width:25%;
   margin-top: 100px;
   margin-bottom: 30px;
+  border-radius: 10px;
 }
 
 #instagram-btn{
- width:20%;
+  height: 75px;
+ width:25%;
  margin-bottom: 30px;
+ border-radius: 10px;
 }
 
 #facebook-btn{
-width:20%;
+  height: 75px;
+width:25%;
 margin-bottom: 30px;
+border-radius: 10px;
 }
 
 #github-btn{
-width:20%;
+  height: 75px;
+width:25%;
 margin-bottom: 30px;
+border-radius: 10px;
 }
 #google{
+  height: 75px;
   display: flex;
     align-items: center;
     padding-left: 30px;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 #instagram{
+  height: 75px;
   display: flex;
     align-items: center;
     padding-left: 30px;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 #facebook{
+  height: 75px;
   display: flex;
     align-items: center;
     padding-left: 30px;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 #github{
+  height: 75px;
   display: flex;
     align-items: center;
     padding-left: 30px;
-    font-size: 30px;
+    font-size: 40px;
 }
 .regLink{
   font-size: 55px;
+  color: white;
+  margin-bottom: 5%;
 }
-#logBody{
-  padding-top: 10%;
-}
+
 
 }
 
 @media only screen and (min-device-height : 720px) and (max-device-height : 811px){
   #login-title{
-    padding-top: 10%;
-    margin-bottom: 6%;
+    width: 70%;
+    padding-top: 7%;
+    margin-bottom: 15%;
     font-size: 60px;
+    }
+    #logBody{
+      padding-top: 4%;
     }
   }
 
 @media only screen and (min-device-height : 812px) and (max-device-height : 823px){
   #login-title{
-    padding-top: 18%;
+    padding-top: 15%;
     margin-bottom: 10%;
     font-size: 60px;
     }
