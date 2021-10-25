@@ -17,7 +17,7 @@ function Register(props) {
     }
     const handleRegisterButton = () => {
         
-        fetch('https://quizwiz.glitch.me/api/register', {
+        fetch('https://quiz-wiz-server.glitch.me/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -43,12 +43,12 @@ function Register(props) {
     
     return (
         <div id="register-container">
-            <h1 id="login-title">Become A Quizard</h1>
+            <img id="login-title" src="/QuizWizNav3.png" alt="QuizWiz Logotype"/>
             {message && <p>{message}</p>}
             <input className="log-RegText" type="text" name="userName" onChange={handleRegisterChange} placeholder=" Enter Desired User name"  /><br></br>
             <input className="log-RegText" type="password" name="password" onChange={handleRegisterChange} placeholder="Enter Desired Password" /><br></br>
             <button className="log-Btn" onClick={handleRegisterButton}>Submit</button>
-            <NavLink to="/" className='logLink'>Back to Login</NavLink>
+            <NavLink className='regLink'to="/" >Back to Login</NavLink>
         </div>
     )
 }

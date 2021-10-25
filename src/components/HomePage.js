@@ -47,7 +47,7 @@ function HomePage() {
                         categories ranging from topics across pop culture, entertainment, and academia.
                         <br/>
                         <br/>
-                        Rack up as many correct answers as you can within the time limit to place on
+                        Rack up as many correct answers as you can to place on
                         the leaderboard and prove to everyone that you are the one, true QuizWiz!
                     </p>
                 </Row>

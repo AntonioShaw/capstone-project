@@ -54,7 +54,8 @@ function Login(props) {
 
     return (
         <div id="logBody">
-            <div id="login-title">Quiz Whiz</div>
+           
+            <img id="login-title" src="/QuizWizNav3.png" alt="QuizWiz Logotype"/>
             <div id="login-Container">
                 
                 <input className="log-RegText" type="text" name="username" onChange={handleLoginChange} placeholder="User name" /><br></br>
@@ -65,7 +66,7 @@ function Login(props) {
             
             <div className="icon-container" style={{ textAlign: "center" }}>
 
-            Not A Member Yet?  <NavLink to="/register" className='regLink'>Register Here</NavLink>
+            <NavLink to="/register" className='regLink'>Register Here</NavLink>
 
                 <a id="google-btn" href="https://quiz-wiz-server.glitch.me/auth/google">
                 <a href="https://quiz-wiz-server.glitch.me/auth/google">
