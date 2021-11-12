@@ -1,98 +1,157 @@
-import React, {useState, useEffect} from 'react';
-import { Link, useParams } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import HomeButton from './homebutton.jsx'
-import UserHighScore from './UserHighScore.jsx'
-import  Avatar from "react-avatar";
-import  NavBar from "./NavBar.js";
-import Leaderboard from "./Leaderboard.js";
-
+import React, { useState, useEffect } from 'react';
+import NavBar from "./NavBar.js";
+import { Row, Carousel } from 'react-bootstrap';
 
 
 function Profile(props) {
 
-	  const [myScore, setMyScore] = useState(null)
-	  const [leaderboard, setLeaderboard] = useState([])
-		const [wizardName, setwizardName] = useState("")
+  const styling = {
+    marginRight: "auto",
+    marginLeft: "auto",
+    disisplay: "flex",
+    flexDirection: "row"
 
+  }
 
+  const [myScore, setMyScore] = useState(null)
+  const [wizardName, setwizardName] = useState("")
+  const [firstPlace, setfirstPlace] = useState([])
+  const [secondPlace, setsecondPlace] = useState([])
+  const [thirdPlace, setthirdPlace] = useState([])
 
-   function getuserscore(wizardName){
-		 console.log("debugging")
-        fetch(`https://quiz-wiz-server.glitch.me/api/userscore?username=${wizardName}`)
-        .then(response => response.json())
-        .then(myScore => {
-          console.log(myScore.score)
-					localStorage.setItem("wizardName",wizardName )
-          setMyScore(myScore.score)
-        })
-    }
-
-
-
-  
-  useEffect(() => {
-       getLeaderboard() 
-			 setwizardName(props.match.params.username)
-			 getuserscore(props.match.params.username)
-    }, [])
-
-  const getLeaderboard = () => {
+  useEffect(() => { getLeaderboard() }, [])
+  const getLeaderboard = (props) => {
     fetch('https://quiz-wiz-server.glitch.me/api/highscore')
       .then(response => response.json())
       .then(result => {
-        console.log(result[0])
-        setLeaderboard(result)
-        console.log(leaderboard)
+        console.log(result)
+        setfirstPlace(result[0])
+        setsecondPlace(result[1])
+        setthirdPlace(result[2])
       }
       )
   }
-  
-  const leaderboardList = leaderboard.map((score,index) => {
-      return(
-      <ul key={index} >
-      <h1>Wizard:{score.username}</h1>
-      <h3>High Score:{score.score}</h3>
-      </ul>
-      )
 
-})
 
-	
-  return(
-    <div id=" profile-page">
-    <div id="top-container">
-    <NavBar />
-    </div> 
-    <div id = 'bottom-container'>
-    <div id="profile-container">
-    <div id=" avatar-container">
-    <a  href="https://quizwiz.me">
-    <a href="https://quizwiz.me">
-    <img id="avatar" src="/1myavatar.jpg" alt=""  style={{ backgroundColor: "blue" }}></img>
-    </a>
-    
-    </a>
-    </div>                    
-    <div id='info-container'>
-		<br /><br />
-    Hello {wizardName}<br></br>
-    Your current high score is {myScore}
-    </div><br />
-    <Link to={'/'}><Button variant="primary">Log Out</Button></Link>
-    
+
+  function getuserscore(wizardName) {
+    console.log("debugging")
+    fetch(`https://quiz-wiz-server.glitch.me/api/userscore?username=${wizardName}`)
+      .then(response => response.json())
+      .then(myScore => {
+        console.log(myScore.score)
+        localStorage.setItem("wizardName", wizardName)
+        setMyScore(myScore.score)
+      })
+  }
+
+
+
+
+  useEffect(() => {
+    //  getLeaderboard() 
+    setwizardName(props.match.params.username)
+    getuserscore(props.match.params.username)
+  }, [])
+
+
+  return (
+    <div id="profile-page">
+      <div id="top-container">
+        <NavBar />
+      </div>
+
+      <div id="avatar-container">
+
+        <div className="fill2">
+          <img id="" src="/wiz2.png" alt="" ></img>
+
+        </div>
+
+        <div className="HomeBlurb" >
+          <p className="Instructions">
+            Welcome to QuizWiz, a fun trivia game where your knowledge of various topics
+            can be put to the test. You can select from any one of twelve different trivia
+            categories ranging from topics across pop culture, entertainment, and academia.
+          </p>
+          <p className="Instructions" id="p2">
+            Rack up as many correct answers as you can to place on
+            the leaderboard and prove to everyone that you are the one, true QuizWiz!
+          </p>
+        </div>
+
+      </div>
+    <div id="pro-btm">
+      <div id='profile-name'>
+        <p className="Instructions" id="instructionsp">
+          Hello {wizardName}<br></br>
+          Your  high score is <i>{myScore}</i>
+        </p>
+      </div>
+     
+
+
+
+      <div id="leaderboard-body">
+
+        <Row className="rowBlurb" style={styling}>
+          <Carousel fade>
+            <Carousel.Item>
+
+              <img
+                id="leaderboardSliderImage"
+                src="/QuizWizGold.png" fluid
+                alt=""
+              />
+
+
+              <div id="carousel-caption">
+                <h3>First Place QuizWiz</h3>
+                <p>You are the Gandalf of all the quiz wizards, a true Quizard!</p>
+                <i>{firstPlace.username} : {firstPlace.score}</i>
+              </div>
+
+            </Carousel.Item>
+            <Carousel.Item>
+
+              <img
+                id="leaderboardSliderImage"
+                src="/QuizWizSilver.png" fluid
+                alt=""
+              />
+
+
+
+              <div id="carousel-caption">
+                <h3>Second Place QuizWiz</h3>
+                <p>good job, you are almost to the top!</p>
+                <i>{secondPlace.username} : {secondPlace.score}</i>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+
+              <img
+                id="leaderboardSliderImage"
+                src="/QuizWizBronze.png" fluid
+                alt=""
+              />
+
+
+              <div id="carousel-caption">
+                <h3>Third Place QuizWiz</h3>
+                <p>Not bad, but you can keep pushing!.</p>
+                <i>{thirdPlace.username} : {thirdPlace.score}</i>
+              </div>
+            </Carousel.Item>
+          </Carousel>
+        </Row>
+      </div>
+      </div>
     </div>
-    <div id="top-ten">
-    {leaderboardList}
-    </div>    
-    </div>
-    
-    
-    </div>
-    
-    
+
+
   )
-  
+
 }
 
 export default Profile

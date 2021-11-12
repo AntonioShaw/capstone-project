@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import '../App.css';
 
 
@@ -10,7 +8,7 @@ function UserHighScore(props) {
 	let [userhighscore, sethighscore] = useState(null)
 	
 	function gethighscore(id) {
-		fetch(`https://quizwiz.glitch.me/api/userscore?username=bobby`)
+		fetch(`https://quiz-wiz-server.glitch.me/api/userscore?username=bobby`)
 		.then(response => response.json())
 		.then(result => {
 			console.log(result.score)

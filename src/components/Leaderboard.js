@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../App.css'
-import { ButtonGroup, Container, Row, Col, Carousel } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
+import { faTrophy } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
@@ -26,74 +25,54 @@ function Leaderboard(props) {
 		padding: '10px',
 		minWidth: '325px'
 	}
-	const [firstPlace, setfirstPlace] = useState([])
-	const [secondPlace, setsecondPlace] = useState([])
-	const [thirdPlace, setthirdPlace] = useState([])
 	
-	useEffect(() => { getLeaderboard() }, [])
-	const getLeaderboard = (props) => {
-		fetch('https://quiz-wiz-server.glitch.me/api/highscore')
-			.then(response => response.json())
-			.then(result => {
-				console.log(result)
-				setfirstPlace(result[0])
-				setsecondPlace(result[1])
-				setthirdPlace(result[2])
-			}
-		)
-	}
+	const [leaderboard, setLeaderboard] = useState([])
+	
+	useEffect(() => {
+		getLeaderboard() 
+	 }, [])
+ 
+   const getLeaderboard = () => {
+	 fetch('https://quiz-wiz-server.glitch.me/api/highscore')
+	   .then(response => response.json())
+	   .then(result => {
+		 console.log(result[0])
+		 setLeaderboard(result)
+		 console.log(leaderboard)
+	   }
+	   )
+   }
+   
+
+
+   const leaderboardList = leaderboard.map((score) => {
+	   return(
+		
+			
+			<tr>
+    			<td><FontAwesomeIcon icon={faTrophy} size = 'med' id="lead-trophy"/>{score.username}</td>
+    			<td>{score.score}</td>
+  			</tr>
+			  
+	   
+	   )
+ 
+ })
 
 	return (
 
-
-		<div id="leaderboard-body">
+		<div id="top-ten">
 			<NavBar />
-			<div id="leaderboard-title">LeaderBoard</div>
-			<Row className="HomeBlurb" style={styling}>
-				<Carousel fade>
-					<Carousel.Item>
-					<br/><br/><br/><br/><br/>
-						<img
-							className="leaderboardSliderImage"
-							src="QuizWizGold.png" fluid
-							alt="First slide"
-						/>
-						<Carousel.Caption id="carousel-caption">
-							<h3>First Place QuizWiz</h3>
-							<p>You are the Gandalf of all the quiz wizards, a true Quizard!</p>
-							{firstPlace.username} : {firstPlace.score}
-						</Carousel.Caption>
-					</Carousel.Item>
-					<Carousel.Item>
-					<br/><br/><br/><br/><br/>
-						<img
-							className="leaderboardSliderImage"
-							src="QuizWizSilver.png" fluid
-							alt="Second slide"
-						/>
-						<Carousel.Caption id="carousel-caption">
-							<h3>Second Place QuizWiz</h3>
-							<p>good job, you are almost to the top!</p>
-
-							{secondPlace.username} : {secondPlace.score}
-						</Carousel.Caption>
-					</Carousel.Item>
-					<Carousel.Item>
-					<br/><br/><br/><br/><br/>
-						<img
-							className="leaderboardSliderImage"
-							src="QuizWizBronze.png" fluid
-							alt="Third slide"
-						/>
-						<Carousel.Caption id="carousel-caption">
-							<h3>Third Place QuizWiz</h3>
-							<p>Not bad, but you can keep pushing!.</p>
-							{thirdPlace.username} : {thirdPlace.score}
-						</Carousel.Caption>
-					</Carousel.Item>
-				</Carousel>
-			</Row>
-		</div>
+			<div id="lead-list">
+				<table id="lead-table">	
+					<tr>
+    					<th>Wizard</th>
+    					<th>High Score</th>
+  					</tr>	
+    			{leaderboardList}
+				</table>
+			</div>
+    	</div>
 	)
 }
 export default Leaderboard

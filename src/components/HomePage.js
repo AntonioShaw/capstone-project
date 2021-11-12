@@ -1,130 +1,100 @@
 import React from 'react'
-// import { Container } from 'react-bootstrap'
-import "bootstrap/dist/css/bootstrap.min.css";
 import '../App.css'
-import { ButtonGroup } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { faAnkh, faBolt, faBook, faBrain, faFilm, faFootballBall, faGamepad, faGlobeAmericas, faMouse, faMusic, faQuestion, faTv, } from '@fortawesome/free-solid-svg-icons';
 
 
 
+<div id="wrapbox">
+    <div className="fill">
+        <img id="" src="/wiz3.png" alt="QuizWiz Logotype" />
+    </div>
+</div>
 
-
-//
-// const handleClick = () => setLoading(true);
 
 
 function HomePage() {
     const styling = {
-        backgroundColor: 'rgba(255, 255, 255, .15)',
-        backdropFilter: 'blur(5px)',
-        color: 'silver',
-        flexDirection: 'column',
-        display: 'block',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        textAlign: 'left',
-        opacity: '.85',
-        border: '2px solid black',
-        width: '35%',
-        padding: '10px',
-        minWidth: '325px',
+        paddingRight: "0px",
+        paddingLeft: "0px",
+        margin: "5px"
+    }
+    const gridStyling = {
+        paddingRight: "0",
+        paddingLeft: "0",
+        marginRight: "0",
+        marginLeft: "100px",
+        width: "50%",
     }
     return (
-        <div>
+        <div >
             <NavBar id='navBar' />
-            <div>
-                <Row className="HomeBlurb" style={styling}>
-                    <p className="Instructions">
-                        Welcome to QuizWiz, a fun trivia game where your knowledge of various topics 
-                        can be put to the test. You can select from any one of twelve different trivia
-                        categories ranging from topics across pop culture, entertainment, and academia.
-                        <br/>
-                        <br/>
-                        Rack up as many correct answers as you can to place on
-                        the leaderboard and prove to everyone that you are the one, true QuizWiz!
-                    </p>
-                </Row>
-                <div>
-                <Row className="ButtonContainer" style={styling}>
-                    <ButtonGroup className="ButtonGroup" vertical block style={{display: 'flex', alignItems: 'center', justifyContent: 'center',maxWidth: '100%'}}> 
-                        <Link className="QuizLink" to={{ pathname: `/quiz/9`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faBrain}/>
-                                <div className="QuizButtonText">General Information</div></div>
-                            </Button>
-                        </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/10`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faBook}/>
-                                <div className="QuizButtonText">Books</div></div>
-                            </Button>
-                        </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/11`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faFilm}/>
-                                <div className="QuizButtonText">Movies</div></div>
-                            </Button>
-                        </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/12`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faMusic}/>
-                                <div className="QuizButtonText">Music</div></div>
-                            </Button>
-                        </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/14`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faTv}/>
-                                <div className="QuizButtonText">TV</div></div>
-                            </Button>
-                        </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/15`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faGamepad}/>
-                                <div className="QuizButtonText">Video Games</div></div>
-                            </Button>
-                        </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/18`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faMouse}/>
-                                <div className="QuizButtonText">Computers</div></div>
-                            </Button>
-                        </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/20`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faAnkh}/>
-                                <div className="QuizButtonText">Mythology</div></div>
-                            </Button>
-                        </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/21`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faFootballBall}/>
-                                <div className="QuizButtonText">Sports</div></div>
-                            </Button>
-                        </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/22`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faGlobeAmericas}/>
-                                <div className="QuizButtonText">Geography</div></div>
-                            </Button>
-                        </Link>
-                        <Link className="QuizLink" to={{ pathname: `/quiz/29`}}>
-                            <Button className="QuizButton"> <div className="QuizButtonContainer"> 
-                                <FontAwesomeIcon icon={faBolt}/>
-                                <div className="QuizButtonText">Comics</div></div>
-                            </Button>
-                        </Link>
-                    </ButtonGroup>
-                </Row>
+
+            
+            <div id="wrapbox">
+
+                <div className="fill">
+                    <img id="" src="/wiz5.png" alt="QuizWiz Logotype" />
                 </div>
+
+                <div class="grid-container">
+                    <a class="grid-item" href="/quiz/9">
+                        <FontAwesomeIcon icon={faBrain} />
+                        <br></br>
+                        General Info
+                    </a>
+                    <a class="grid-item" href="/quiz/11">
+                       <FontAwesomeIcon icon={faFilm} />
+                        <br></br>
+                        Movies
+                   </a>
+                    <a class="grid-item" href="/quiz/10">
+                       <FontAwesomeIcon icon={faBook} />
+                        <br></br>
+                        Books
+                  </a>
+                    <a class="grid-item" href="/quiz/15">
+                       <FontAwesomeIcon icon={faGamepad} />
+                        <br></br>
+                        Video Games
+                  </a>
+                  <a class="grid-item" href="/quiz/12">
+                       <FontAwesomeIcon icon={faMusic} />
+                        <br></br>
+                        Music
+                   </a>
+                   <a class="grid-item" href="/quiz/14">
+                       <FontAwesomeIcon icon={faTv} />
+                        <br></br>
+                        TV
+                  </a>
+                   <a class="grid-item" href="/quiz/20">
+                       <FontAwesomeIcon icon={faAnkh} />
+                        <br></br>
+                        Mythology
+                   </a>
+                   <a class="grid-item" href="/quiz/21">
+                       <FontAwesomeIcon icon={faFootballBall} />
+                        <br></br>
+                        Sports
+                   </a>
+                   <a class="grid-item" href="/quiz/22">
+                       <FontAwesomeIcon icon={faGlobeAmericas} />
+                        <br></br>
+                        Geography
+                   </a>
+                   <a class="grid-item" href="/quiz/29">
+                   <FontAwesomeIcon icon={faBolt}/>
+                        <br></br>
+                        Comics
+                   </a>
+               </div>
             </div>
         </div>
+
+        
+
     )
 }
 

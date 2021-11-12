@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import HomeButton from './homebutton.jsx'
 
 import '../App.css';
@@ -23,7 +21,7 @@ function DeleteUser(props) {
 			body: JSON.stringify([{"userName": deleteduser}]),
 		};
 		
-		fetch("https://quizwiz.glitch.me/api/deleteuser", requestOptions)
+		fetch("https://damp-spire-28696.herokuapp.com/api/deleteuser", requestOptions)
 		.then(response => response.text())
 		.then(result => console.log(result))
 		.catch(error => console.log('error', error));

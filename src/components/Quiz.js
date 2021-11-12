@@ -60,7 +60,7 @@ function StartQuiz() {
       redirect: 'follow'
     };
     
-    fetch("https://quizwiz.glitch.me/api/submit", requestOptions)
+    fetch("https://quiz-wiz-server.glitch.me/api/submit", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
@@ -147,10 +147,12 @@ function StartQuiz() {
   }, [quizfinished, currentscore, highscore]);
 
   return (
+  
+  <div id="quiz-page"> 
     <div>
-      <div>
         <NavBar />
-      </div>
+    </div>
+    <div id="quizes">
       <div style={{ height: "100%", color: "whitesmoke", textAlign: "center" }}>
         {quizfinished != true ? (
           <div>
@@ -159,7 +161,7 @@ function StartQuiz() {
               <Button onClick={() => playquiz()}>Start Quiz </Button>
             )}
 
-            <br />
+            
             <br />
             <br />
             {correctanswer != null ? (
@@ -174,13 +176,13 @@ function StartQuiz() {
                   maxWidth: "90%"
                 }}
               >
-                <Button onClick={() => checkAnswer(0)}>{answers[0]}</Button>
+                <Button onClick={() => checkAnswer(0)} id="q-btn">{answers[0]}</Button>
                 <br />
-                <Button onClick={() => checkAnswer(1)}>{answers[1]}</Button>
+                <Button onClick={() => checkAnswer(1)}id="q-btn">{answers[1]}</Button>
                 <br />
-                <Button onClick={() => checkAnswer(2)}>{answers[2]}</Button>
+                <Button onClick={() => checkAnswer(2)}id="q-btn">{answers[2]}</Button>
                 <br />
-                <Button onClick={() => checkAnswer(3)}>{answers[3]}</Button>
+                <Button onClick={() => checkAnswer(3)}id="q-btn">{answers[3]}</Button>
                 <br />
               </ButtonGroup>
             ) : null}
@@ -188,13 +190,13 @@ function StartQuiz() {
         ) : (
           <div>
             <Link to={{ pathname: `/homepage` }}>
-              <Button>
+              <Button id="sub-btn">
                 <div>Return Home</div>
               </Button>
             </Link>
-            <Popup modal trigger={<Button>Submit Quiz</Button>}>
+            <Popup modal trigger={<Button id="sub-btn">Submit Quiz</Button>}>
               {" "}
-              <div>
+              <div id="final-blurb">
               <h1>Good Job!</h1>
               Your score was {finalscore}<br />
               Your previous high score is {highscore}
@@ -205,48 +207,11 @@ function StartQuiz() {
           </div>
         )}
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className="fill-quiz">
+        <img src="/wiz1.png" />
+      </div> 
     </div>
+  </div>     
   );
 }
 
