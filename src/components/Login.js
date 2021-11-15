@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import '../App.css';
 import googleLogo from './google2.png';
-import instagramLogo from './instagram.png';
 import facebookLogo from './facebook.png';
 import githubLogo from './github.png';
 function Login(props) {
@@ -79,14 +78,14 @@ function Login(props) {
                 
                 <a id="facebook-btn" href="https://quiz-wiz-server.glitch.me/auth/facebook">
                 <a href="https://quiz-wiz-server.glitch.me/auth/facebook">
-                    <img id="icon" src={facebookLogo} alt="Login With Facebook"  style={{ backgroundColor: "#3B5899" }}></img>
+                    <img id="icon" src={facebookLogo} alt="Login With Facebook"  style={{ backgroundColor: "#4168bb" }}></img>
                 </a>
                 <div id="facebook">Login With Facebook</div>
                 </a>
 
                 <a id="github-btn" href="https://quiz-wiz-server.glitch.me/auth/github">
                 <a href="https://quiz-wiz-server.glitch.me/auth/github">
-                    <img id="icon" src={githubLogo} alt="Login With Github"  style={{ backgroundColor: "#333333" }}></img>
+                    <img id="icon" src={githubLogo} alt="Login With Github"  style={{ backgroundColor: "#000" }}></img>
                 </a>
                 <div id="github">Login With Github</div>
                 </a>

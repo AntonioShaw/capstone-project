@@ -45,8 +45,8 @@ function Register(props) {
         <div id="register-container">
             <img id="login-title" src="/QuizWizNav3.png" alt="QuizWiz Logotype"/>
             {message && <p>{message}</p>}
-            <input className="log-RegText" type="text" name="userName" onChange={handleRegisterChange} placeholder=" Enter Desired User name"  /><br></br>
-            <input className="log-RegText" type="password" name="password" onChange={handleRegisterChange} placeholder="Enter Desired Password" /><br></br>
+            <input className="log-RegText"  type="text" name="userName" onChange={handleRegisterChange} placeholder=" Enter Desired User name"  /><br></br>
+            <input className="log-RegText" id="reg-text" type="password" name="password" onChange={handleRegisterChange} placeholder="Enter Desired Password" /><br></br>
             <button className="log-Btn" onClick={handleRegisterButton}>Submit</button>
             <NavLink className='regLink'to="/" >Back to Login</NavLink>
         </div>
