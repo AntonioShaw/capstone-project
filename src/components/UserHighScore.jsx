@@ -6,9 +6,11 @@ import '../App.css';
 function UserHighScore(props) {
 	
 	let [userhighscore, sethighscore] = useState(null)
+	let [wizardName, setwizardName] = useState("");
 	
 	function gethighscore(id) {
-		fetch(`https://quiz-wiz-server.glitch.me/api/userscore?username=bobby`)
+		setwizardName(localStorage.getItem ('wizardName'))
+		fetch(`https://quiz-wiz-server.glitch.me/api/userscore?username=${wizardName}`)
 		.then(response => response.json())
 		.then(result => {
 			console.log(result.score)
